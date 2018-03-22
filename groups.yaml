@@ -1,0 +1,138 @@
+### Views###
+#default_view:
+#  name: Home
+#  view: yes
+#  icon: mdi:home
+#  entities:
+#    - group.time_travel_card
+#    - group.weather_card
+#    - group.family
+
+vHome:
+  name: Home
+  view: yes
+  icon: mdi:home
+  entities:
+    - group.family
+    - camera.camera_1
+    - group.smart_home
+    - group.travel_times
+    - group.cat_devices
+    - group.weatherfc
+ 
+vBedroom:
+  name: Bedroom
+  view: yes
+  icon: mdi:hotel
+  entities:
+    - group.bedroom
+    - media_player.bedroom_speaker
+
+vMedia:
+  name: Media
+  view: yes
+  icon: mdi:play-pause
+  entities:
+    - group.media_devices
+    - media_player.living_room_speaker
+
+vTechnical:
+  name: Technical
+  view: yes
+  icon: mdi:settings
+  entities:
+    - group.network_devices
+    - group.sensors_net
+    - group.weatherfc
+    - group.weatherd
+    
+### Groups###
+Family:
+  name: Family
+  entities:
+    - device_tracker.amysiphone
+    - device_tracker.bill_honor_7
+
+#Guests:
+#  name: Guests
+#  entities:
+#    -device_tracker.bill_honor_7
+
+Bedroom:
+  name: Bedroom
+  entities:
+    - device_tracker.googlebed
+
+media_devices:
+  name: Media Devices
+  entities:
+    - device_tracker.googlelounge
+    - device_tracker.ps4
+    - device_tracker.sky_q_box
+
+network_devices:
+  name: Network Devices
+  entities:
+    - device_tracker.williamenvy
+    - device_tracker.mycloudex2ultra
+    - device_tracker.sky_q_hub
+
+sensors_net:
+  name: Internet Tests
+  entities:
+    - sensor.speedtest_download
+    - sensor.speedtest_upload
+    - sensor.speedtest_ping
+
+cat_devices:
+  name: Cat Devices
+  entities:
+    - device_tracker.sureflap_hub
+    - device_tracker.space_heater
+    - switch.space_heater
+
+smart_home:
+  name: Smart Home
+  entities:
+    - device_tracker.hik_cam1_wifi
+    #- binary_sensor.IP CAMERA PIR Alarm
+    - device_tracker.sonoff_scentsy
+    - switch.scentsy
+    - switch.living_room_lamp
+    - device_tracker.dash_fairy
+
+weatherfc:
+  name: Weather Forecast
+  entities:
+    - sensor.dark_sky_icon
+    - sensor.dark_sky_summary
+    - sensor.dark_sky_temperature
+    - sun.sun
+    
+weatherd:
+  name: Weather Detail
+  entities:
+    - sensor.weather_symbol
+    - sensor.dark_sky_hourly_summary
+    - sensor.weather_temperature
+    - sensor.dark_sky_daily_low_temperature
+    - sensor.dark_sky_nearest_storm_distance
+    - sensor.weather_cloudiness
+    - sensor.weather_pressure
+    - sensor.dark_sky_wind_speed
+    - sensor.weather_wind_speed
+    - sensor.weather_wind_direction
+    - sensor.weather_precipitation
+    - sensor.dark_sky_precip_probability
+    - sensor.weather_humidity
+    - sensor.weather_dewpoint_temperature
+    - sensor.weather_fog
+    - sensor.weather_low_clouds
+    - sensor.weather_medium_clouds
+    - sensor.weather_high_clouds
+
+travel_times:
+  name: Travel Times
+  entities:
+    - sensor.amy_home_to_work
+    - sensor.bill_home_to_work

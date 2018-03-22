@@ -1,0 +1,32 @@
+
+###vHome, gSmart Home###
+- platform: mqtt
+  name: "Scentsy"
+  icon: mdi:lamp
+  state_topic: "stat/sonoff/POWER"
+  command_topic: "cmnd/sonoff/POWER"
+  payload_on: "ON"
+  payload_off: "OFF"
+#  payload_toggle: "TOGGLE"
+  qos: 0
+  optimistic: false
+  retain: true
+
+###vHome, gSmart Home###  
+- platform: hikvisioncam
+  host: !secret net_cam1
+  port: 443
+  username: !secret cam1_use
+  password: !secret cam1_pass
+  
+###vHome, gCat Devices###  
+- platform: tplink
+  name: "Space Heater"
+  icon: mdi:radiator
+  host: !secret net_tpiprad
+
+###vHome, gSmart Home###
+- platform: tplink
+  name: "Living Room Lamp"
+  icon: mdi:lamp
+  host: !secret net_tpipLR

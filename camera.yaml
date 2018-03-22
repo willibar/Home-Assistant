@@ -1,0 +1,13 @@
+
+
+- platform: mjpeg
+  mjpeg_url: !secret cam1_url
+  name: Camera_1
+  username: !secret cam1_use
+  password: !secret cam1_pass
+  #authentication: basic
+
+#name: Bill's Phone
+#platform: generic
+#still_image_url: https://maps.googleapis.com/maps/api/staticmap?center={{ states.device_tracker.demo_paulus.attributes.latitude }},{{ states.device_tracker.demo_paulus.attributes.longitude }}&zoom=13&size=500x500&maptype=roadmap&markers=color:blue%7Clabel:P%7C{{ states.device_tracker.demo_paulus.attributes.latitude }},{{ states.device_tracker.demo_paulus.attributes.longitude }}
+#limit_refetch_to_url_change: true

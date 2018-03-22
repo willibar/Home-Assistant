@@ -1,0 +1,13 @@
+###Scenes###
+
+###Bedroom Scenes###
+#- name: bedroom normal
+
+#- name: bedroom night
+
+
+###Arrival Home###
+#- name: home time
+#  entities:
+#    switch.scentsy:
+#      state: on

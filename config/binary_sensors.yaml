@@ -1,0 +1,4 @@
+- platform: hikvision
+  host: !secret net_cam1
+  username: !secret cam1_use
+  password: !secret cam1_pass

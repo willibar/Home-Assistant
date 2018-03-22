@@ -1,0 +1,51 @@
+#Weather prediction
+- platform: yr
+  name: Weather
+  icon: mdi:weather-partlycloudy
+  forecast: 24
+  monitored_conditions:
+    - temperature
+    - symbol
+    - precipitation
+    - windSpeed
+    - pressure
+    - windDirection
+    - humidity
+    - fog
+    - cloudiness
+    - lowClouds
+    - mediumClouds
+    - highClouds
+    - dewpointTemperature
+
+- platform: darksky
+  api_key: 18bd45cf2428bcff79b62e200f511b54
+  units: uk2
+  monitored_conditions:
+    - summary
+    - icon
+    - nearest_storm_distance
+    - hourly_summary
+    - temperature
+    - precip_probability
+    - wind_speed
+    - temperature_min  
+
+
+- platform: speedtest
+  monitored_conditions:
+    - ping
+    - download
+    - upload
+
+- platform: google_travel_time
+  name: Bill Home to Work
+  api_key: AIzaSyCTfwRHbeYRk8sXB9clx8Bz_GATJEpHbOY
+  origin: !secret home_addr
+  destination: !secret Bwork_addr
+
+- platform: google_travel_time
+  name: Amy Home to Work
+  api_key: AIzaSyCTfwRHbeYRk8sXB9clx8Bz_GATJEpHbOY
+  origin: !secret home_addr
+  destination: !secret Awork_addr

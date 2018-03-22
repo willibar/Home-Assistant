@@ -1,0 +1,11 @@
+*
+!*.yaml
+!automations
+!config
+!.gitignore
+!.md
+entity_registry.yaml
+google_assistant.yaml
+home-assistant_v2.db
+known_devices.yaml
+secrets.yaml

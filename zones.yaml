@@ -1,0 +1,35 @@
+- name: Home
+  latitude: !secret home_lat
+  longitude: !secret home_long
+  radius: 250
+  icon: mdi:home
+
+- name: Bill Work
+  latitude: !secret Bwork_lat
+  longitude: !secret Bwork_long
+  radius: 250
+  icon: mdi:briefcase
+
+- name: Amy Work
+  latitude: !secret Awork_lat
+  longitude: !secret Awork_long
+  radius: 250
+  icon: mdi:briefcase
+
+- name: Orchard Cottages
+  latitude: !secret OC_lat
+  longitude: !secret OC_long
+  radius: 250
+  icon: mdi:home
+
+- name: 94 Cav Meads
+  latitude: !secret CM_lat
+  longitude: !secret CM_long
+  radius: 250
+  icon: mdi:home
+  
+- name: 9 Gloucester Road
+  latitude: !secret GR_lat
+  longitude: !secret GR_long
+  radius: 250
+  icon: mdi:home

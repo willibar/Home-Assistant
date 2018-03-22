@@ -1,0 +1,94 @@
+homeassistant:
+  name: Home
+  latitude: !secret home_lat
+  longitude: !secret home_long
+  elevation: !secret elevation
+  unit_system: metric
+  # metric for Metric, imperial for Imperial
+  time_zone: Europe/London
+  # Pick yours from here: http://en.wikipedia.org/wiki/List_of_tz_database_time_zones
+  customize: !include customize.yaml
+  # Customization file
+
+  
+# Show links to resources in log and frontend
+#introduction:
+# Enables the frontend
+frontend:
+# Enables configuration UI
+config:
+
+http:
+   ssl_certificate: /ssl/fullchain.pem
+   ssl_key: /ssl/privkey.pem
+   base_url: !secret base_url
+   api_password: !secret http_password
+  # Secrets are defined in the file secrets.yaml
+  # Uncomment this if you are using SSL/TLS, running in Docker container, etc.
+
+# Checks for available updates
+# Note: This component will send some information about your system to
+# the developers to assist with development of Home Assistant.
+# For more information, please see:
+# https://home-assistant.io/blog/2016/10/25/explaining-the-updater/
+updater:
+  # Optional, allows Home Assistant developers to focus on popular components.
+  # include_used_components: true
+
+# Discover some devices automatically
+discovery:
+
+# Allows you to issue voice commands from the frontend in enabled browsers
+conversation:
+
+# Enables support for tracking state changes over time
+history:
+
+# View all events in a logbook
+logbook:
+
+# Enables a map showing the location of tracked devices
+map:
+
+# Track the sun
+sun:
+
+# Text to speech
+tts:
+  - platform: google
+
+# Cloud
+cloud:
+
+device_tracker:
+  - platform: nmap_tracker
+    hosts: !secret nmap_hosts
+#    home_interval: 10
+    exclude:
+     - !secret nmap_exclude
+    new_device_defaults:
+        track_new_devices: true
+        hide_if_away: false
+    interval_seconds: 60
+    consider_home: 300
+#  - platform: bt_home_hub_5
+#  - platform: sky_hub
+#    host: 192.168.1.254
+    
+mqtt:
+  broker: core-mosquitto
+  username: !secret mqtt_user
+  password: !secret mqtt_pass
+
+
+automation: !include automations.yaml
+group: !include groups.yaml
+scene: !include scenes.yaml
+script: !include scripts.yaml
+zone: !include zones.yaml
+
+binary_sensor: !include config/binary_sensors.yaml
+camera: !include camera.yaml
+#google_assistant: !include google_assistant.yaml
+sensor: !include sensor.yaml
+switch: !include config/switches.yaml
