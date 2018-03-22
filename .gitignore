@@ -3,7 +3,7 @@
 !automations
 !config
 !.gitignore
-!.md
+!*.md
 entity_registry.yaml
 google_assistant.yaml
 home-assistant_v2.db
