@@ -4,6 +4,7 @@
 !config
 !.gitignore
 !*.md
+!.travis.yml
 entity_registry.yaml
 google_assistant.yaml
 home-assistant_v2.db
