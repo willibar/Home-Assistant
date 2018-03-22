@@ -19,8 +19,10 @@ frontend:
 config:
 
 http:
-   ssl_certificate: /ssl/fullchain.pem
-   ssl_key: /ssl/privkey.pem
+   ssl_certificate: !secret ssl_cert
+   #/ssl/fullchain.pem
+   ssl_key: !secret ssl_key
+   #/ssl/privkey.pem
    base_url: !secret base_url
    api_password: !secret http_password
   # Secrets are defined in the file secrets.yaml
