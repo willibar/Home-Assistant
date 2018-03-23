@@ -202,6 +202,10 @@
   trigger:
     platform: time
     at: '02:00:00'
+  condition:
+  - condition: time
+    weekday:
+      - sun
   action:
   - service: hassio.snapshot_full
     data_template:
