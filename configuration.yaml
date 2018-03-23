@@ -83,7 +83,7 @@ mqtt:
   password: !secret mqtt_pass
 
 
-automation: !include automations.yaml
+automation: !include_dir_merge_list automation
 group: !include groups.yaml
 scene: !include scenes.yaml
 script: !include scripts.yaml
