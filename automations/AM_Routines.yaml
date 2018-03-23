@@ -1,0 +1,43 @@
+###AM Routines ###
+
+###Morning Alarms###
+#- alias: Morning Radio
+#  trigger:
+#    - platform: time
+#      at: '06:45:00'
+#  condition:
+#    - condition: time
+#      weekday:
+#        - mon
+#        - tue
+#        - wed
+#        - thu
+#        - fri
+#  action:
+#    - service: media_player.play_media
+#      data_template:
+#        volume: 0.15
+#        entity_id:
+#          - media_player.bedroom_speaker
+#        media_content_id:
+#          http://bbcmedia.ic.llnwd.net/stream/bbcmedia_radio1_mf_p
+#        media_content_type: 'audio/mp4'
+
+- alias: Wake-up Time
+  trigger:
+    - platform: time
+      at: '07:06:00'
+  condition:
+    - condition: time
+      weekday:
+        - mon
+        - tue
+        - wed
+        - thu
+        - fri
+  action:
+    - service: tts.google_say
+      entity_id: media_player.bedroom_speaker
+      data_template:
+        message: 'Good morning Amy & Bill. The Weather forecast is {{states.sensor.dark_sky_hourly_summary.state}}, the temperature outside is currently {{states.sensor.weather_temperature.state|round}} degrees, Amys travel time to work currently is {{states.sensor.amy_home_to_work.state}} minutes. Bills travel time to work currently is {{states.sensor.bill_home_to_work.state}} minutes. Time to get in the shower!'
+
