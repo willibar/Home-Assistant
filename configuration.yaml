@@ -89,8 +89,11 @@ scene: !include scenes.yaml
 script: !include scripts.yaml
 zone: !include zones.yaml
 
-binary_sensor: !include config/binary_sensors.yaml
 camera: !include camera.yaml
 #google_assistant: !include google_assistant.yaml
 sensor: !include sensor.yaml
+
+binary_sensor: !include config/binary_sensors.yaml
+input_select: !include config/input_selects.yaml
+input_number: !include config/input_numbers.yaml
 switch: !include config/switches.yaml

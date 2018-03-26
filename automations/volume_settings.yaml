@@ -9,7 +9,7 @@
         - media_player.living_room_speaker
         - media_player.bedroom_speaker
       data:
-        volume_level: "0.09"
+        volume_level: '0.09'
 
 - alias: volume wake up
   trigger:
@@ -20,7 +20,7 @@
       entity_id:
         - media_player.bedroom_speaker
       data:
-        volume_level: "0.15"        
+        volume_level: '0.12'        
         
 - alias: volume up
   trigger:
@@ -32,5 +32,18 @@
         - media_player.living_room_speaker
         - media_player.bedroom_speaker
       data:
-        volume_level: "0.3"      
+        volume_level: '0.3'      
 
+### Radio volume settings###
+#- alias: 'Set Radio Volume'
+#  trigger:
+#    platform: state
+#    entity_id: input_slider.volume_radio
+#  action:
+#    service: media_player.volume_set
+#    data_template:
+#      entity_id: >
+#        {%if is_state("input_select.speakers", "Living Room") %} media_player.living_room_speaker
+#        {% elif is_state("input_select.speakers", "Bedroom") %} media_player.bedroom_speaker
+#        {% endif %}
+#      volume_level: '{{ states.input_slider.volume_radio.state }}'

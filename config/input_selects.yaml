@@ -1,0 +1,23 @@
+###net_radio inputs###
+radio_station:
+  name: 'Select Radio Station'
+  options:
+    - BBC Radio 1
+    - BBC Radio 4
+    - BBC 6 Music
+
+speakers:
+  name: 'Select Speakers'
+  options:
+    - Living Room
+    - Bedroom
+#    - Ceiling Speakers
+  icon: mdi:speaker-wireless
+
+#input_slider:
+#  volume_radio:
+#    name: Volume
+#    icon: mdi:volume-high
+#    min: 0
+#    max: 1
+#    step: 0.05
