@@ -6,7 +6,7 @@ net_radio:
     - service: media_player.play_media
       data_template:
         entity_id: >
-          {%if is_state("input_select.speakers", "Living Room") %} media_player.livimg_room_speaker
+          {%if is_state("input_select.speakers", "Living Room") %} media_player.living_room_speaker
           {% elif is_state("input_select.speakers", "Bedroom") %} media_player.bedroom_speaker
           {% endif %}
         media_content_id: >
