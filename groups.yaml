@@ -144,4 +144,4 @@ net_radio:
     - input_select.radio_station
     - input_select.speakers
     - script.net_radio
-    - input_slider.volume_radio
+    - input_number.volume_radio
