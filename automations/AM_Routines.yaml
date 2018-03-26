@@ -1,27 +1,25 @@
 ###AM Routines ###
 
 ###Morning Alarms###
-#- alias: Morning Radio
-#  trigger:
-#    - platform: time
-#      at: '06:45:00'
-#  condition:
-#    - condition: time
-#      weekday:
-#        - mon
-#        - tue
-#        - wed
-#        - thu
-#        - fri
-#  action:
-#    - service: media_player.play_media
-#      data_template:
-#        volume: 0.15
-#        entity_id:
-#          - media_player.bedroom_speaker
-#        media_content_id:
-#          http://bbcmedia.ic.llnwd.net/stream/bbcmedia_radio1_mf_p
-#        media_content_type: 'audio/mp4'
+- alias: Morning Radio
+  trigger:
+    - platform: time
+      at: '06:45:00'
+  condition:
+    - condition: time
+      weekday:
+        - mon
+        - tue
+        - wed
+        - thu
+        - fri
+  action:
+    - service: media_player.play_media
+      data:
+        entity_id: media_player.bedroom_speaker
+        media_content_id: http://a.files.bbci.co.uk/media/live/manifesto/audio/simulcast/hls/uk/sbr_high/ak/bbc_radio_one.m3u8
+        media_content_type: 'application/x-mpegurl'
+        volume_level: 0.12
 
 - alias: Wake-up Time
   trigger:
@@ -40,4 +38,24 @@
       entity_id: media_player.bedroom_speaker
       data_template:
         message: 'Good morning Amy & Bill. The Weather forecast is {{states.sensor.dark_sky_hourly_summary.state}}, the temperature outside is currently {{states.sensor.weather_temperature.state|round}} degrees, Amys travel time to work currently is {{states.sensor.amy_home_to_work.state}} minutes. Bills travel time to work currently is {{states.sensor.bill_home_to_work.state}} minutes. Time to get in the shower!'
+        volume_level: 0.15
 
+- alias: Morning Radio 2
+  trigger:
+    - platform: time
+      at: '07:07:30'
+  condition:
+    - condition: time
+      weekday:
+        - mon
+        - tue
+        - wed
+        - thu
+        - fri
+  action:
+    - service: media_player.play_media
+      data:
+        entity_id: media_player.bedroom_speaker
+        media_content_id: http://a.files.bbci.co.uk/media/live/manifesto/audio/simulcast/hls/uk/sbr_high/ak/bbc_radio_one.m3u8
+        media_content_type: 'application/x-mpegurl'
+        volume_level: 0.12
