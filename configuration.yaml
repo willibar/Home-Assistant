@@ -95,4 +95,5 @@ sensor: !include sensor.yaml
 
 binary_sensor: !include config/binary_sensors.yaml
 input_select: !include config/input_selects.yaml
+input_slider: !include config/input_sliders.yaml
 switch: !include config/switches.yaml
