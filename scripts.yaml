@@ -1,0 +1,17 @@
+###net_radio###
+
+net_radio:
+  alias: Play Radio on Google Mini
+  sequence:
+    - service: media_player.play_media
+      data_template:
+        entity_id: >
+          {%if is_state("input_select.speakers", "Living Room") %} media_player.livimg_room_speaker
+          {% elif is_state("input_select.speakers", "Bedroom") %} media_player.bedroom_speaker
+          {% endif %}
+        media_content_id: >
+          {% if is_state("input_select.radio_station", "BBC Radio 1") %} http://a.files.bbci.co.uk/media/live/manifesto/audio/simulcast/hls/uk/sbr_high/ak/bbc_radio_one.m3u8
+          {% elif is_state("input_select.radio_station", "BBC Radio 4") %} http://a.files.bbci.co.uk/media/live/manifesto/audio/simulcast/hls/uk/sbr_high/ak/bbc_radio_fourfm.m3u8
+          {% elif is_state("input_select.radio_station", "BBC 6 Music") %} http://a.files.bbci.co.uk/media/live/manifesto/audio/simulcast/hls/uk/sbr_high/ak/bbc_6music.m3u8
+          {% endif %}
+        media_content_type: 'application/x-mpegurl'
