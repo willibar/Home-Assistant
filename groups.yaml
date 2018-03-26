@@ -19,6 +19,7 @@ vHome:
     - group.travel_times
     - group.cat_devices
     - group.weatherfc
+    - group.net_radio
  
 vBedroom:
   name: Bedroom
@@ -136,3 +137,11 @@ travel_times:
   entities:
     - sensor.amy_home_to_work
     - sensor.bill_home_to_work
+
+net_radio:
+  name: Internet Radio
+  entities:
+    - input_select.radio_station
+    - input_select.speakers
+    - script.net_radio
+    - input_slider.volume_radio
