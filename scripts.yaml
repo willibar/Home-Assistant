@@ -3,6 +3,13 @@
 net_radio:
   alias: Play Radio on Google Mini
   sequence:
+    - service: media_player.volume_set
+      data_template:
+        entity_id: >
+          {%if is_state("input_select.speakers", "Living Room") %} media_player.living_room_speaker
+          {% elif is_state("input_select.speakers", "Bedroom") %} media_player.bedroom_speaker
+          {% endif %}
+        volume_level: '{{ states.input_slider.volume_radio.state }}'
     - service: media_player.play_media
       data_template:
         entity_id: >
@@ -15,4 +22,4 @@ net_radio:
           {% elif is_state("input_select.radio_station", "BBC 6 Music") %} http://a.files.bbci.co.uk/media/live/manifesto/audio/simulcast/hls/uk/sbr_high/ak/bbc_6music.m3u8
           {% endif %}
         media_content_type: 'application/x-mpegurl'
-        volume_level: '{{ states.input_slider.volume_radio.state }}'
+#        volume_level: '{{ states.input_slider.volume_radio.state }}'
