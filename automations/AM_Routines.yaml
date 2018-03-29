@@ -19,7 +19,7 @@
         entity_id: media_player.bedroom_speaker
         media_content_id: http://a.files.bbci.co.uk/media/live/manifesto/audio/simulcast/hls/uk/sbr_high/ak/bbc_radio_one.m3u8
         media_content_type: 'application/x-mpegurl'
-        volume_level: "0.12"
+#        volume_level: "0.12"
 
 - alias: Wake-up Time
   trigger:
@@ -58,4 +58,4 @@
         entity_id: media_player.bedroom_speaker
         media_content_id: http://a.files.bbci.co.uk/media/live/manifesto/audio/simulcast/hls/uk/sbr_high/ak/bbc_radio_one.m3u8
         media_content_type: 'application/x-mpegurl'
-        volume_level: "0.12"
+#        volume_level: "0.12"
