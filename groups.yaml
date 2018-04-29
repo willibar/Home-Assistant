@@ -14,6 +14,7 @@ vHome:
   icon: mdi:home
   entities:
     - group.family
+    - group.guests
     - camera.camera_1
     - group.smart_home
     - group.travel_times
@@ -28,6 +29,7 @@ vBedroom:
   entities:
     - group.bedroom
     - media_player.bedroom_speaker
+    - group.weatherfc
 
 vMedia:
   name: Media
@@ -36,6 +38,14 @@ vMedia:
   entities:
     - group.media_devices
     - media_player.living_room_speaker
+
+vGuestBed:
+  name: Guest Bedroom
+  view: yes
+  icon: mdi:bed-empty
+  entities:
+    - group.guests
+    - group.guest_bedroom
 
 vTechnical:
   name: Technical
@@ -48,21 +58,32 @@ vTechnical:
     - group.weatherd
     
 ### Groups###
-Family:
+family:
   name: Family
   entities:
     - device_tracker.amysiphone
     - device_tracker.bill_honor_7
 
-#Guests:
-#  name: Guests
-#  entities:
-#    -device_tracker.bill_honor_7
+guests:
+  name: Guests
+  entities:
+    - device_tracker.harveysiphone
+    - device_tracker.jillsiphone
+    - device_tracker.samsunggalaxys7
+    - device_tracker.galaxys6
+    - device_tracker.ailsasipodtouch
+    - device_tracker.oneplusone
 
-Bedroom:
+bedroom:
   name: Bedroom
   entities:
     - device_tracker.googlebed
+
+guest_bedroom:
+  name: Guest Bedroom
+  entities:
+    - device_tracker.youview
+    - device_tracker.chromecast1
 
 media_devices:
   name: Media Devices
@@ -75,6 +96,7 @@ network_devices:
   name: Network Devices
   entities:
     - device_tracker.williamenvy
+    - device_tracker.williamenvy_2
     - device_tracker.mycloudex2ultra
     - device_tracker.sky_q_hub
 
@@ -97,9 +119,11 @@ smart_home:
   entities:
     - device_tracker.hik_cam1_wifi
     #- binary_sensor.IP CAMERA PIR Alarm
-    - device_tracker.sonoff_scentsy
+    - device_tracker.sonoff-scentsy
     - switch.scentsy
+    - device_tracker.lr_lamp
     - switch.living_room_lamp
+    - device_tracker.dash_finish
     - device_tracker.dash_fairy
 
 weatherfc:
