@@ -119,7 +119,7 @@ smart_home:
   entities:
     - device_tracker.hik_cam1_wifi
     #- binary_sensor.IP CAMERA PIR Alarm
-    - device_tracker.sonoff-scentsy
+    - device_tracker.sonoff_scentsy
     - switch.scentsy
     - device_tracker.lr_lamp
     - switch.living_room_lamp
