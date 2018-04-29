@@ -46,6 +46,7 @@ vGuestBed:
   entities:
     - group.guests
     - group.guest_bedroom
+    - media_player.guest_room_chromecast
 
 vTechnical:
   name: Technical
