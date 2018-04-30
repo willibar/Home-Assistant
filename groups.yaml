@@ -66,9 +66,20 @@ vTechnical:
   entities:
     - group.network_devices
     - group.sensors_net
+    - group.all_automations
 
     
 ### Groups###
+all_automations:
+  hidden: false
+all_devices:
+  hidden: false
+all_scripts:
+  hidden: false
+all_switches:
+  hidden: false
+
+
 family:
   name: Family
   entities:
