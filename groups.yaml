@@ -17,8 +17,8 @@ vHome:
     - group.guests
     - camera.camera_1
     - group.smart_home
+    - group.home_automations
     - group.travel_times
-    - group.cat_devices
     - group.weatherfc
     - group.net_radio
  
@@ -37,9 +37,19 @@ vBedroom:
   icon: mdi:hotel
   entities:
     - group.bedroom
+    - group.bed_automations
     - group.weatherfc
     - group.net_radio
     - media_player.bedroom_speaker
+
+vCats:
+  name: Cats
+  view: yes
+  icon: mdi:cat
+  entities:
+    - group.cat_devices
+    - group.cat_automations
+    - group.weatherfc
 
 vWeather:
   name: Weather
@@ -91,6 +101,14 @@ bedroom:
   entities:
     - device_tracker.googlebed
 
+bed_automations:
+  name: Bedroom Automations
+  control: hidden
+  entities:
+    - automation.wakeup_time
+    - automation.morning_radio
+    - automation.morning_radio_2
+
 guest_bedroom:
   name: Guest Bedroom
   entities:
@@ -126,6 +144,15 @@ cat_devices:
     - device_tracker.space_heater
     - switch.space_heater
 
+cat_automations:
+  name: Cat Automations
+  control: hidden
+  entities:
+    - automation.cat_am_on
+    - automation.cat_am_off
+    - automation.cat_pm_on
+    - automation.cat_pm_off
+
 smart_home:
   name: Smart Home
   control: hidden
@@ -138,6 +165,15 @@ smart_home:
     - switch.living_room_lamp
     - device_tracker.dash_finish
     - device_tracker.dash_fairy
+
+home_automations:
+  name: Home Automations
+  control: hidden
+  entities:
+    - automation.home_time
+    - automation.home_time_end_dumb
+    - automation.lamp_light_on
+    - automation.lamp_light_off
 
 weatherfc:
   name: Weather Forecast
