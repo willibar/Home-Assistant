@@ -70,16 +70,6 @@ vTechnical:
 
     
 ### Groups###
-all_automations:
-  hidden: false
-all_devices:
-  hidden: false
-all_scripts:
-  hidden: false
-all_switches:
-  hidden: false
-
-
 family:
   name: Family
   entities:
@@ -138,6 +128,7 @@ cat_devices:
 
 smart_home:
   name: Smart Home
+  control: hidden
   entities:
     - device_tracker.hik_cam1_wifi
     #- binary_sensor.IP CAMERA PIR Alarm
