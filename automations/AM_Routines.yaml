@@ -24,7 +24,7 @@
         media_content_id: http://a.files.bbci.co.uk/media/live/manifesto/audio/simulcast/hls/uk/sbr_high/ak/bbc_radio_one.m3u8
         media_content_type: 'application/x-mpegurl'
 
-- alias: Wake-up Time
+- alias: Wake-Up Time
   trigger:
     - platform: time
       at: '07:06:00'
@@ -49,7 +49,7 @@
 - alias: Morning Radio 2
   trigger:
     - platform: time
-      at: '07:07:30'
+      at: '07:06:50'
   condition:
     - condition: time
       weekday:
