@@ -1,11 +1,13 @@
 ###expose all_ groups###
 group.all_automations:
+  control: hidden
   hidden: false
 group.all_devices:
   hidden: false
 group.all_scripts:
   hidden: false
 group.all_switches:
+  control: hidden
   hidden: false
 
 ###GA Renames###
