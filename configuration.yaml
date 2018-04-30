@@ -73,6 +73,9 @@ device_tracker:
         hide_if_away: false
     interval_seconds: 60
     consider_home: 300
+  - platform: google_maps
+    username: !secret gmap_user
+    password: !secret gmap_pass
 #  - platform: bt_home_hub_5
 #  - platform: sky_hub
 #    host: 192.168.1.254
