@@ -11,8 +11,8 @@ group.all_switches:
   hidden: false
 
 ###Gmaps Tracker Rename###
-device_tracker.google_maps_113840736270482299573
-  friendly_name: Bill
+#device_tracker.google_maps_113840736270482299573:
+#  friendly_name: Bill
 
 ###GA Renames###
 media_player.living_room_speaker:
