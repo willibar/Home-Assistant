@@ -136,7 +136,7 @@ media_automations:
 network_devices:
   name: Network Devices
   entities:
-    - device_tracker.williamenvy
+#    - device_tracker.williamenvy
     - device_tracker.williamenvy_2
     - device_tracker.mycloudex2ultra
     - device_tracker.sky_q_hub
