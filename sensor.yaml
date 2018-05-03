@@ -49,3 +49,15 @@
   api_key: !secret gtt_api_key
   origin: !secret home_addr
   destination: !secret Awork_addr
+
+- platform: waze_travel_time
+  name: Bill Waze to Work
+  origin: !secret home_addr
+  destination: !secret Bwork_addr
+  region: 'EU'
+
+- platform: waze_travel_time
+  name: Amy Waze to Work
+  origin: !secret home_addr
+  destination: !secret Awork_addr
+  region: 'EU'
