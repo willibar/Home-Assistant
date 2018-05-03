@@ -93,7 +93,7 @@ script: !include scripts.yaml
 zone: !include zones.yaml
 
 camera: !include camera.yaml
-#google_assistant: !include google_assistant.yaml
+google_assistant: !include google_assistant.yaml
 sensor: !include sensor.yaml
 
 binary_sensor: !include config/binary_sensors.yaml
