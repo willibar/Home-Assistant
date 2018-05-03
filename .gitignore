@@ -5,8 +5,8 @@
 !.gitignore
 !*.md
 !.travis.yml
+.google_maps_location_sharing.cookies
 entity_registry.yaml
-google_assistant.yaml
 home-assistant_v2.db
 known_devices.yaml
 secrets.yaml
