@@ -27,7 +27,7 @@
 - alias: Wake-Up Time
   trigger:
     - platform: time
-      at: '07:06:00'
+      at: '06:56:00'
   condition:
     - condition: time
       weekday:
@@ -44,12 +44,12 @@
     - service: tts.google_say
       entity_id: media_player.bedroom_speaker
       data_template:
-        message: 'Good morning Amy & Bill. The Weather forecast is {{states.sensor.dark_sky_hourly_summary.state}}, the temperature outside is currently {{states.sensor.weather_temperature.state|round}} degrees, Amys travel time to work currently is {{states.sensor.amy_home_to_work.state}} minutes. Bills travel time to work currently is {{states.sensor.bill_home_to_work.state}} minutes. Time to get in the shower!'
+        message: 'Good morning Amy & Bill. The Weather forecast is {{states.sensor.dark_sky_hourly_summary.state}}, the temperature outside is currently {{states.sensor.weather_temperature.state|round}} degrees, Amys travel time to work currently is {{states.sensor.amy_waze_to_work.state}} minutes. Bills travel time to work currently is {{states.sensor.bill_waze_to_work.state}} minutes. Time to get in the shower!'
 
 - alias: Morning Radio 2
   trigger:
     - platform: time
-      at: '07:06:50'
+      at: '06:56:50'
   condition:
     - condition: time
       weekday:
