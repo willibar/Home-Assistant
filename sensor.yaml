@@ -19,7 +19,7 @@
     - dewpointTemperature
 
 - platform: darksky
-  api_key: 18bd45cf2428bcff79b62e200f511b54
+  api_key: !secret dark_sky_api_key
   units: uk2
   monitored_conditions:
     - summary
