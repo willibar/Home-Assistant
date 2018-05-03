@@ -227,7 +227,9 @@ travel_times:
   name: Travel Times
   entities:
     - sensor.amy_home_to_work
+    - sensor.amy_waze_to_work
     - sensor.bill_home_to_work
+    - sensor.bill_waze_to_work
 
 net_radio:
   name: Internet Radio
