@@ -89,7 +89,6 @@ family:
     - binary_sensor.bill
     - device_tracker.google_maps_113840736270482299573
     - device_tracker.oneplus_6
-    - device_tracker.bill_honor_7
 
 guests:
   name: Guests
@@ -184,6 +183,7 @@ smart_home:
   name: Smart Home
   control: hidden
   entities:
+    - device_tracker.bill_honor_7
     - device_tracker.hik_cam1_wifi
     - binary_sensor.ip_camera_pir_alarm_2
     - device_tracker.sonoff_scentsy
