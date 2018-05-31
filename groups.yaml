@@ -86,6 +86,7 @@ family:
   name: Family
   entities:
     - device_tracker.amysiphone
+    - binary_sensor.bill
     - device_tracker.google_maps_113840736270482299573
     - device_tracker.oneplus_6
     - device_tracker.bill_honor_7
