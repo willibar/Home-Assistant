@@ -87,6 +87,7 @@ family:
   entities:
     - device_tracker.amysiphone
     - device_tracker.google_maps_113840736270482299573
+    - device_tracker.oneplus_6
     - device_tracker.bill_honor_7
 
 guests:
@@ -98,6 +99,10 @@ guests:
     - device_tracker.galaxys6
     - device_tracker.ailsasipodtouch
     - device_tracker.oneplusone
+    - device_tracker.nexus6p
+    - device_tracker.oneplus_5
+    - device_tracker.oneplus_5_2
+    - device_tracker.oneplus_5_3
 
 bedroom:
   name: Bedroom
@@ -115,6 +120,7 @@ bed_automations:
 guest_bedroom:
   name: Guest Bedroom
   entities:
+    - device_tracker.toshibatv
     - device_tracker.youview
     - device_tracker.chromecast1
 
@@ -124,6 +130,7 @@ media_devices:
     - device_tracker.googlelounge
     - device_tracker.ps4
     - device_tracker.sky_q_box
+    - device_tracker.amysipad
 
 media_automations:
   name: Media Automations
@@ -140,6 +147,7 @@ network_devices:
     - device_tracker.williamenvy_2
     - device_tracker.mycloudex2ultra
     - device_tracker.sky_q_hub
+    - device_tracker.adminsmbp
 
 sensors_net:
   name: Internet Tests
@@ -176,13 +184,19 @@ smart_home:
   control: hidden
   entities:
     - device_tracker.hik_cam1_wifi
-    #- binary_sensor.IP CAMERA PIR Alarm
+    - binary_sensor.ip_camera_pir_alarm_2
     - device_tracker.sonoff_scentsy
     - switch.scentsy
     - device_tracker.lr_lamp
     - switch.living_room_lamp
     - device_tracker.dash_finish
     - device_tracker.dash_fairy
+
+garden:
+  name: Garden Devices
+  control: hidden
+  entities:
+    - device_tracker.googlehome
 
 home_automations:
   name: Home Automations
