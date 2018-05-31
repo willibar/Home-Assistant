@@ -52,6 +52,14 @@ vCats:
     - group.cat_automations
     - group.weatherfc
 
+vGarden:
+  name: Garden
+  view: yes
+  icon: mdi:flower
+  entities:
+    - group.garden
+    - group.weatherfc
+
 vWeather:
   name: Weather
   view: yes
