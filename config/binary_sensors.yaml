@@ -2,3 +2,19 @@
   host: !secret net_cam1
   username: !secret cam1_use
   password: !secret cam1_pass
+
+- platform: bayesian
+  name: 'Bill'
+  prior: 0.3
+  probability_threshold: 0.6
+  observations:
+    - entity_id: 'device_tracker.oneplus_6'
+      prob_given_true: 0.5
+      prob_given_false: 0.2
+      platform: 'state'
+      to_state: 'home'
+    - entity_id: 'device_tracker.google_maps_113840736270482299573'
+      prob_given_true: 0.4
+      prob_given_false: 0.2
+      platform: 'state'
+      to_state: 'home'
