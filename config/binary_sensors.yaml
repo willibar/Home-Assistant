@@ -5,6 +5,7 @@
 
 - platform: bayesian
   name: 'Bill'
+  picture: https://lh6.googleusercontent.com/-qcMbR7XWtfA/AAAAAAAAAAI/AAAAAAAAAD8/0FaSXEU56gc/photo.jpg
   prior: 0.3
   probability_threshold: 0.6
   observations:
