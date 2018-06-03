@@ -196,6 +196,11 @@ home_env:
     - device_tracker.nest_hub
     - binary_sensor.downstairs_thermostat_online
     - climate.downstairs
+    - sensor.downstairs_thermostat_target
+    - sensor.downstairs_thermostat_temperature
+    - sensor.downstairs_thermostat_humidity
+    - sensor.downstairs_thermostat_operation_mode
+    - sensor.downstairs_thermostat_hvac_state
     - binary_sensor.downstairs_thermostat_fan
     - binary_sensor.downstairs_thermostat_has_leaf
     - binary_sensor.downstairs_thermostat_is_locked
