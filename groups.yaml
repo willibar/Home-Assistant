@@ -16,6 +16,7 @@ vHome:
     - group.family
     - group.guests
     - camera.camera_1
+    - group.home_env
     - group.smart_home
     - group.home_automations
     - group.travel_times
@@ -187,6 +188,18 @@ cat_automations:
     - automation.cat_am_off
     - automation.cat_pm_on
     - automation.cat_pm_off
+
+home_env:
+  name: Climate
+  control: hidden
+  entities:
+    - device_tracker.nest_hub
+    - binary_sensor.downstairs_thermostat_online
+    - climate.downstairs
+    - binary_sensor.downstairs_thermostat_fan
+    - binary_sensor.downstairs_thermostat_has_leaf
+    - binary_sensor.downstairs_thermostat_is_locked
+    - binary_sensor.downstairs_thermostat_is_using_emergency_heat
 
 smart_home:
   name: Smart Home
