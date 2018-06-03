@@ -84,6 +84,8 @@ mqtt:
   broker: core-mosquitto
   username: !secret mqtt_user
   password: !secret mqtt_pass
+  discovery: true
+  discovery_prefix: HA
 
 nest:
   client_id: !secret nest_client_id
