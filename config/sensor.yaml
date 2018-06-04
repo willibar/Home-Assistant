@@ -63,3 +63,35 @@
   origin: !secret home_addr
   destination: !secret Awork_addr
   region: 'EU'
+
+
+###Xiaomi Battery Levels###
+- platform: mqtt
+  name: "Front Door Battery"
+  state_topic: "smartthings/Door Sensor 1 (Front)/battery/state"
+  device_class: battery
+  unit_of_measurement: '%'
+
+- platform: mqtt
+  name: "Hall Door Battery"
+  state_topic: "smartthings/Door Sensor 2 (Hall)/battery/state"
+  device_class: battery
+  unit_of_measurement: '%'
+
+- platform: mqtt
+  name: "Other Door Battery"
+  state_topic: "smartthings/Door Sensor 3/battery/state"
+  device_class: battery
+  unit_of_measurement: '%'
+
+- platform: mqtt
+  name: "PIR Sensor Battery"
+  state_topic: "smartthings/PIR Motion Sensor/battery/state"
+  device_class: battery
+  unit_of_measurement: '%'
+
+- platform: mqtt
+  name: "PIR Sensor Illuminance"
+  state_topic: "smartthings/PIR Motion Sensor/illuminance/state"
+  device_class: illuminance
+  unit_of_measurement: 'lx'
