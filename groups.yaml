@@ -115,6 +115,7 @@ guests:
 
 bedroom:
   name: Bedroom
+  control: hidden
   entities:
     - device_tracker.googlebed
     - light.amy_bedside_light
@@ -130,6 +131,7 @@ bed_automations:
 
 guest_bedroom:
   name: Guest Bedroom
+  control: hidden
   entities:
     - device_tracker.toshibatv
     - device_tracker.youview
@@ -137,6 +139,7 @@ guest_bedroom:
 
 media_devices:
   name: Media Devices
+  control: hidden
   entities:
     - device_tracker.googlelounge
     - device_tracker.ps4
@@ -153,6 +156,7 @@ media_automations:
 
 network_devices:
   name: Network Devices
+  control: hidden
   entities:
 #    - device_tracker.williamenvy
     - device_tracker.williamenvy_2
@@ -163,6 +167,7 @@ network_devices:
 
 sensors_net:
   name: Internet Tests
+  control: hidden
   entities:
     - sensor.speedtest_download
     - sensor.speedtest_upload
@@ -177,6 +182,7 @@ net_automations:
 
 cat_devices:
   name: Cat Devices
+  control: hidden
   entities:
     - device_tracker.sureflap_hub
     - device_tracker.space_heater
@@ -240,6 +246,7 @@ home_automations:
 
 weatherfc:
   name: Weather Forecast
+  control: hidden
   entities:
     - sensor.dark_sky_icon
     - sensor.dark_sky_summary
@@ -248,6 +255,7 @@ weatherfc:
     
 weatherd:
   name: Weather Detail
+  control: hidden
   entities:
     - sensor.weather_symbol
     - sensor.dark_sky_hourly_summary
@@ -270,6 +278,7 @@ weatherd:
 
 travel_times:
   name: Travel Times
+  control: hidden
   entities:
     - sensor.amy_home_to_work
     - sensor.amy_waze_to_work
@@ -278,6 +287,7 @@ travel_times:
 
 net_radio:
   name: Internet Radio
+  control: hidden
   entities:
     - input_select.radio_station
     - input_select.speakers
