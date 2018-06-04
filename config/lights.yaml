@@ -1,0 +1,39 @@
+### Lights ###
+
+
+###Bedroom Lights###
+
+###Bedside Lights###
+- platform: mqtt
+  name: "Amy Bedside Light"
+  state_topic: "smartthings/Amy Bedside/switch/state"
+  command_topic: "smartthings/Amy Bedside/switch/cmd"
+  brightness_state_topic: "smartthings/Amy Bedside/level/state"
+  brightness_command_topic: "smartthings/Amy Bedside/level/cmd"
+  brightness_scale: 101
+  color_temp_state_topic: "smartthings/Amy Bedside/colorTemperature/state"
+  color_temp_command_topic: "smartthings/Amy Bedside/colorTemperature/cmd"
+  payload_on: "on"
+  payload_off: "off"
+  retain: true
+  optimistic: false
+
+- platform: mqtt
+  name: "Bill Bedside Light"
+  state_topic: "smartthings/Bill Bedside/switch/state"
+  command_topic: "smartthings/Bill Bedside/switch/cmd"
+  brightness_state_topic: "smartthings/Bill Bedside/level/state"
+  brightness_command_topic: "smartthings/Bill Bedside/level/cmd"
+  brightness_scale: 101
+  color_temp_state_topic: "smartthings/Bill Bedside/colorTemperature/state"
+  color_temp_command_topic: "smartthings/Bill Bedside/colorTemperature/cmd"
+  payload_on: "on"
+  payload_off: "off"
+  retain: true
+  optimistic: false
+  
+  
+  ###Hallway Lights###
+  
+  #- platform: mqtt
+  #  name: "Hall Light"
