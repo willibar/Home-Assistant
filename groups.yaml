@@ -117,6 +117,8 @@ bedroom:
   name: Bedroom
   entities:
     - device_tracker.googlebed
+    - light.amy_bedside_light
+    - light.bill_bedside_light
 
 bed_automations:
   name: Bedroom Automations
