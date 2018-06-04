@@ -1,7 +1,42 @@
 ###Binary Sensors Go Here###
 
+###Hikvision PIR sensor###
 - platform: hikvision
   host: !secret net_cam1
   username: !secret cam1_use
   password: !secret cam1_pass
+
+###PIR Sensor###
+- platform: mqtt
+  name: "PIR Sensor"
+  state_topic: "smartthings/PIR Motion Sensor/motion/state"
+  device_class: motion
+  payload_on: "active"
+  payload_off: "inactive"
+  retain: true
+
+###Door Sensors###
+- platform: mqtt
+  name: "Front Door"
+  state_topic: "smartthings/Door Sensor 1 (Front)/contact/state"
+  device_class: door
+  payload_on: "open"
+  payload_off: "closed"
+  retain: true
+
+- platform: mqtt
+  name: "Hall Door"
+  state_topic: "smartthings/Door Sensor 2 (Hall)/contact/state"
+  device_class: door
+  payload_on: "open"
+  payload_off: "closed"
+  retain: true
+
+- platform: mqtt
+  name: "Other Door"
+  state_topic: "smartthings/Door Sensor 3/contact/state"
+  device_class: door
+  payload_on: "open"
+  payload_off: "closed"
+  retain: true
 
