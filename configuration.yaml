@@ -104,4 +104,5 @@ sensor: !include sensor.yaml
 binary_sensor: !include config/binary_sensors.yaml
 input_select: !include config/input_selects.yaml
 input_number: !include config/input_numbers.yaml
+light: !include config/lights.yaml
 switch: !include config/switches.yaml
