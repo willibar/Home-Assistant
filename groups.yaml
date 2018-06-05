@@ -87,6 +87,7 @@ vTechnical:
     - group.network_devices
     - group.sensors_net
     - group.net_automations
+    - group.home_env_full
     - group.all_automations
 
     
@@ -204,6 +205,16 @@ home_env:
     - device_tracker.nest_hub
     - binary_sensor.downstairs_thermostat_online
     - climate.downstairs
+    - sensor.downstairs_thermostat_humidity
+    - binary_sensor.downstairs_thermostat_has_leaf
+
+home_env_full:
+  name: Climate Full
+  control: hidden
+  entities:
+    - device_tracker.nest_hub
+    - binary_sensor.downstairs_thermostat_online
+    - climate.downstairs
     - sensor.downstairs_thermostat_target
     - sensor.downstairs_thermostat_temperature
     - sensor.downstairs_thermostat_humidity
@@ -218,14 +229,19 @@ smart_home:
   name: Smart Home
   control: hidden
   entities:
+    - binary_sensor.ip_camera_pir_alarm_2
+    - switch.scentsy
+    - switch.living_room_lamp
+
+smart_home_devices:
+  name: Smart Devices
+  control: hidden
+  entities:
     - device_tracker.nest_hub
     - device_tracker.bill_honor_7
     - device_tracker.hik_cam1_wifi
-    - binary_sensor.ip_camera_pir_alarm_2
-#    - device_tracker.sonoff_scentsy
-    - switch.scentsy
 #    - device_tracker.lr_lamp
-    - switch.living_room_lamp
+#    - device_tracker.sonoff_scentsy
 #    - device_tracker.dash_finish
 #    - device_tracker.dash_fairy
 
