@@ -36,6 +36,7 @@ vLivingRoom:
   name: Living Room
   view: yes
   icon: mdi:sofa
+  entities:
     - group.smart_home_devices
     - group.smart_home
     - group.home_access
