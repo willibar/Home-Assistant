@@ -17,10 +17,8 @@ vHome:
     - group.guests
     - camera.camera_1
     - group.home_env
-    - group.smart_home
     - group.travel_times
     - group.weatherfc
-    - group.net_radio
  
 #vMedia:
 #  name: Media
@@ -38,7 +36,7 @@ vLivingRoom:
     - group.net_radio
     - media_player.living_room_speaker
     - group.lounge_automations
-    - camera.camera1
+    - camera.camera_1
 
 vBedroom:
   name: Bedroom
