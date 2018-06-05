@@ -23,17 +23,23 @@ vHome:
     - group.net_radio
  
 vMedia:
-  name: Living Room
+  name: Media
   view: yes
   icon: mdi:play-pause
   entities:
     - group.media_devices
-    - group.smart_home_devices
-    - group.smart_home
     - group.net_radio
-    - group.home_automations
     - group.media_automations
     - media_player.living_room_speaker
+
+vLivingRoom:
+  name: Living Room
+  view: yes
+  icon: mdi:sofa
+    - group.smart_home_devices
+    - group.smart_home
+    - group.home_access
+    - group.home_automations
 
 vBedroom:
   name: Bedroom
@@ -62,6 +68,8 @@ vGarden:
   entities:
     - group.garden
     - group.weatherfc
+    - media_player.back_garden_speaker
+    - group.net_radio
 
 vWeather:
   name: Weather
@@ -97,6 +105,7 @@ vTechnical:
   view: yes
   icon: mdi:settings
   entities:
+    - group.home_access_details
     - group.home_env_full
     - group.all_automations
 
@@ -255,12 +264,6 @@ smart_home_devices:
 #    - device_tracker.dash_finish
 #    - device_tracker.dash_fairy
 
-garden:
-  name: Garden Devices
-  control: hidden
-  entities:
-    - device_tracker.googlehome
-
 home_automations:
   name: Home Automations
   control: hidden
@@ -269,6 +272,31 @@ home_automations:
     - automation.home_time_end_dumb
     - automation.lamp_light_on
     - automation.lamp_light_off
+
+home_access:
+  name: Access
+  control: hidden
+  entities:
+    - binary_sensor.pir_sensor
+    - binary_sensor.front_door
+    - binary_sensor.hall_door
+    - binary.sensor.other_door
+
+home_access_details:
+  name: Access Details
+  control: hidden
+  entities:
+    - sensor.pir_sensor_illuminance
+    - sensor.pir_sensor_battery
+    - sensor.front_door_battery
+    - sensor.hall_door_battery
+    - sensor.other_door_battery
+
+garden:
+  name: Garden Devices
+  control: hidden
+  entities:
+    - device_tracker.googlehome
 
 weatherfc:
   name: Weather Forecast
