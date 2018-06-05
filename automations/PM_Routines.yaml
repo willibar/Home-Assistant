@@ -35,10 +35,18 @@
       data:
         topic: "cmnd/sonoff/power"
         payload: "OFF"
-#- alias: Home time end smart
-#  trigger:
-#    - platform: state
-#      entity_id: 
+
+- alias: Home time end smart
+  trigger:
+    - platform: state
+      entity_id: switch.scentsy
+      to: 'on'
+  action:
+    - service: mqtt.publish
+      data:
+        topic: "cmnd/sonoff/power"
+        payload: "OFF"
+        delay: '02:00:00'
 
 ###Living Room Lamp###
 - alias: Lamp light on
