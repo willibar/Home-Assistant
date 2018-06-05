@@ -18,18 +18,20 @@ vHome:
     - camera.camera_1
     - group.home_env
     - group.smart_home
-    - group.home_automations
     - group.travel_times
     - group.weatherfc
     - group.net_radio
  
 vMedia:
-  name: Media
+  name: Living Room
   view: yes
   icon: mdi:play-pause
   entities:
     - group.media_devices
+    - group.smart_home_devices
+    - group.smart_home
     - group.net_radio
+    - group.home_automations
     - group.media_automations
     - media_player.living_room_speaker
 
