@@ -280,7 +280,7 @@ home_access:
     - binary_sensor.pir_sensor
     - binary_sensor.front_door
     - binary_sensor.hall_door
-    - binary.sensor.other_door
+    - binary_sensor.other_door
 
 home_access_details:
   name: Access Details
