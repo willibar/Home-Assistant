@@ -19,11 +19,12 @@
       data:
         topic: "cmnd/sonoff/power"
         payload: "ON"
+    - delay: '00:05:00'
     - service: tts.google_say
       entity_id: media_player.living_room_speaker
       data:
         message: 'Welcome home Amy!'
-        delay: '00:05:00'
+
       
 
 - alias: Home time end dumb
@@ -42,11 +43,11 @@
       entity_id: switch.scentsy
       to: 'on'
   action:
+    - delay: '02:00:00'
     - service: mqtt.publish
       data:
         topic: "cmnd/sonoff/power"
         payload: "OFF"
-        delay: '02:00:00'
 
 ###Living Room Lamp###
 - alias: Lamp light on
