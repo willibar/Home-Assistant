@@ -3,6 +3,7 @@
 - platform: bayesian
   name: 'Bill'
   picture: https://lh6.googleusercontent.com/-qcMbR7XWtfA/AAAAAAAAAAI/AAAAAAAAAD8/0FaSXEU56gc/photo.jpg
+  device_class: presence
   prior: 0.3
   probability_threshold: 0.6
   observations:
@@ -12,7 +13,7 @@
       platform: 'state'
       to_state: 'home'
     - entity_id: 'device_tracker.google_maps_113840736270482299573'
-      prob_given_true: 0.4
+      prob_given_true: 0.6
       prob_given_false: 0.2
       platform: 'state'
       to_state: 'home'
