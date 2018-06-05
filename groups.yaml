@@ -69,7 +69,8 @@ vWeather:
   icon: mdi:weather-partlycloudy
   entities:
     - group.weatherfc
-    - group.weatherd    
+    - group.weatherd
+    - group.home_env_full
 
 vGuestBed:
   name: Guest Bedroom
@@ -81,14 +82,21 @@ vGuestBed:
     - group.net_radio
     - media_player.guest_room_chromecast
 
+vIT:
+  name: IT
+  view: yes
+  icon: mdi:laptop-windows
+  entities:
+    - group.network_devices
+    - group.sensors_net
+    - group.net_automations
+   
+
 vTechnical:
   name: Technical
   view: yes
   icon: mdi:settings
   entities:
-    - group.network_devices
-    - group.sensors_net
-    - group.net_automations
     - group.home_env_full
     - group.all_automations
 
