@@ -257,7 +257,6 @@ smart_home:
   name: Smart Home
   control: hidden
   entities:
-    - binary_sensor.ip_camera_pir_alarm_2
     - switch.scentsy
     - switch.living_room_lamp
 
@@ -286,6 +285,7 @@ home_access:
   name: Access
   control: hidden
   entities:
+    - binary_sensor.ip_camera_pir_alarm_2
     - binary_sensor.pir_sensor
     - binary_sensor.front_door
     - binary_sensor.hall_door
