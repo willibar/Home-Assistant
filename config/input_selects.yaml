@@ -11,6 +11,7 @@ speakers:
   options:
     - Living Room
     - Bedroom
+    - Garden
 #    - Ceiling Speakers
   icon: mdi:speaker-wireless
 
