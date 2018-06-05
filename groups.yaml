@@ -51,15 +51,14 @@ vBedroom:
     - group.net_radio
     - media_player.bedroom_speaker
 
-vSmartHome:
-  name: Smart Home
+vGuestBed:
+  name: Guest Bedroom
   view: yes
-  icon: mdi:home-assistant
+  icon: mdi:bed-empty
   entities:
-    - group.smart_home_devices
-    - group.home_access
-    - group.home_automations
-    - group.media_automations
+    - group.guests
+    - group.guest_bedroom
+    - media_player.guest_room_chromecast
 
 vCats:
   name: Cats
@@ -89,15 +88,15 @@ vWeather:
     - group.weatherd
     - group.home_env_full
 
-vGuestBed:
-  name: Guest Bedroom
+vSmartHome:
+  name: Smart Home
   view: yes
-  icon: mdi:bed-empty
+  icon: mdi:home-assistant
   entities:
-    - group.guests
-    - group.guest_bedroom
-    - group.net_radio
-    - media_player.guest_room_chromecast
+    - group.smart_home_devices
+    - group.home_access
+    - group.home_automations
+    - group.media_automations
 
 vIT:
   name: IT
