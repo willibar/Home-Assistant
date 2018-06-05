@@ -22,25 +22,23 @@ vHome:
     - group.weatherfc
     - group.net_radio
  
-vMedia:
-  name: Media
-  view: yes
-  icon: mdi:play-pause
-  entities:
-    - group.media_devices
-    - group.net_radio
-    - group.media_automations
-    - media_player.living_room_speaker
+#vMedia:
+#  name: Media
+#  view: yes
+#  icon: mdi:play-pause
+#  entities:
 
 vLivingRoom:
   name: Living Room
   view: yes
   icon: mdi:sofa
   entities:
-    - group.smart_home_devices
     - group.smart_home
-    - group.home_access
-    - group.home_automations
+    - group.media_devices
+    - group.net_radio
+    - media_player.living_room_speaker
+    - group.lounge_automations
+    - camera.camera1
 
 vBedroom:
   name: Bedroom
@@ -52,6 +50,16 @@ vBedroom:
     - group.weatherfc
     - group.net_radio
     - media_player.bedroom_speaker
+
+vSmartHome:
+  name: Smart Home
+  view: yes
+  icon: mdi:home-assistant
+  entities:
+    - group.smart_home_devices
+    - group.home_access
+    - group.home_automations
+    - group.media_automations
 
 vCats:
   name: Cats
@@ -265,8 +273,8 @@ smart_home_devices:
 #    - device_tracker.dash_finish
 #    - device_tracker.dash_fairy
 
-home_automations:
-  name: Home Automations
+lounge_automations:
+  name: Lounge Automations
   control: hidden
   entities:
     - automation.home_time
@@ -292,6 +300,12 @@ home_access_details:
     - sensor.front_door_battery
     - sensor.hall_door_battery
     - sensor.other_door_battery
+
+home_automations:
+  name: Home Automations
+  control: hidden
+  entities:
+    - automation.home_time
 
 garden:
   name: Garden Devices
