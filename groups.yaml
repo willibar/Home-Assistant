@@ -223,6 +223,7 @@ cat_automations:
     - automation.cat_am_off
     - automation.cat_pm_on
     - automation.cat_pm_off
+    - automation.cat_timeout
 
 home_env:
   name: Climate
