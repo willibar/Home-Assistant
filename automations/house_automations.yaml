@@ -1,0 +1,49 @@
+###Common Area Automations###
+
+
+###Front Door Automations###
+- alias: Front Door On
+  trigger:
+    - platform: state
+      entity_id: binary_sensor.front_door
+      to: 'open'
+    - platform: state
+      entity_id: device_tracker.google_maps_113840736270482299573
+      to: 'Home'
+  condition:
+    - condition: state
+      entity_id: sun.sun
+      state: 'below_horizon'
+  action:
+    - service: mqtt.publish
+      data:
+        topic: "smartthings/Porch Light/level/cmd"
+        payload: 100
+    - service: mqtt.publish
+      data:
+        topic: "smartthings/Porch Light/switch/cmd"
+        payload: "on"
+
+- alias: Front Door Off
+  trigger:
+    - platform: state
+      entity_id: binary_sensor.front_door
+      to: 'closed'
+  action:
+    - delay: '00:02:00'
+    - service: mqtt.publish
+      data:
+        topic: "smartthings/Porch Light/switch/cmd"
+        payload: "off"
+
+- alias: Front Door Timeout
+  trigger:
+    - platform: state
+      entity_id: light.porch_light
+      state: 'on'
+  action:
+    - delay: '00:15:00'
+    - service: mqtt.publish
+      data:
+        topic: "smartthings/Porch Light/switch/cmd"
+        payload: "off"
