@@ -303,7 +303,9 @@ home_automations:
   name: Home Automations
   control: hidden
   entities:
-    - automation.home_time
+    - automation.front_door_on
+    - automation.front_door_off
+    - automation.front_door_timeout
 
 garden:
   name: Garden Devices
