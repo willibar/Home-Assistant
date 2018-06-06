@@ -15,6 +15,7 @@ vHome:
   entities:
     - group.family
     - group.guests
+    - group.home_devices
     - camera.camera_1
     - group.home_env
     - group.travel_times
@@ -298,6 +299,12 @@ home_access_details:
     - sensor.front_door_battery
     - sensor.hall_door_battery
     - sensor.other_door_battery
+
+home_devices:
+  name: Home Devices
+  control: hidden
+  entities:
+    - light.porch_light
 
 home_automations:
   name: Home Automations
