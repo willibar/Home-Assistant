@@ -275,8 +275,8 @@ lounge_automations:
   control: hidden
   entities:
     - automation.home_time
-    - automation.home_time_end_dumb
-    - automation.home_time_end_smart
+#    - automation.home_time_end_dumb
+    - automation.home_time_end
     - automation.lamp_light_on
     - automation.lamp_light_off
 
