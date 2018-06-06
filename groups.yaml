@@ -336,6 +336,7 @@ weatherd:
     - sensor.weather_symbol
     - sensor.dark_sky_hourly_summary
     - sensor.weather_temperature
+    - sensor.dark_sky_daily_high_temperature
     - sensor.dark_sky_daily_low_temperature
     - sensor.dark_sky_nearest_storm_distance
     - sensor.weather_cloudiness
