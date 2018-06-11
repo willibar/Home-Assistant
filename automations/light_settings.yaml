@@ -3,51 +3,51 @@
 ###Not exposed###
 - alias: set_temp
   trigger:
-    platform: state
-    entity_id: input_slider.light_temp
+    - platform: state
+      entity_id: input_slider.light_temp
   action:
-    service: mqtt.publish
-    data_template:
-      topic: >
-        {%if is_state("input_select.lights", "Amy Bedside") %} "smartthings/Amy Bedside/colorTemperature/cmd"
-        {% elif is_state("input_select.lights", "Bill Bedside") %} "smartthings/Bill Bedside/colorTemperature/cmd"
-        {% elif is_state("input_select.lights", "Porch Light") %} "smartthings/Porch Light/colorTemperature/cmd"
-        {% endif %}
-      payload: '{{ states.input_slider.light_temp.state }}'
+    - service: mqtt.publish
+      data_template:
+        topic: >
+          {%if is_state("input_select.lights", "Amy Bedside") %} "smartthings/Amy Bedside/colorTemperature/cmd"
+          {% elif is_state("input_select.lights", "Bill Bedside") %} "smartthings/Bill Bedside/colorTemperature/cmd"
+          {% elif is_state("input_select.lights", "Porch Light") %} "smartthings/Porch Light/colorTemperature/cmd"
+          {% endif %}
+        payload: '{{ states.input_slider.light_temp.state }}'
 
 - alias: set_level
   trigger:
-    platform: state
-    entity_id: input_slider.light_brightness
+    - platform: state
+      entity_id: input_slider.light_brightness
   action:
-    service: mqtt.publish
-    data_template:
-      topic: >
-        {%if is_state("input_select.lights", "Amy Bedside") %} "smartthings/Amy Bedside/level/cmd"
-        {% elif is_state("input_select.lights", "Bill Bedside") %} "smartthings/Bill Bedside/level/cmd"
-        {% elif is_state("input_select.lights", "Porch Light") %} "smartthings/Porch Light/level/cmd"
-        {% endif %}
-      payload: '{{ states.input_slider.light_brightness.state }}'
+    - service: mqtt.publish
+      data_template:
+        topic: >
+          {%if is_state("input_select.lights", "Amy Bedside") %} "smartthings/Amy Bedside/level/cmd"
+          {% elif is_state("input_select.lights", "Bill Bedside") %} "smartthings/Bill Bedside/level/cmd"
+          {% elif is_state("input_select.lights", "Porch Light") %} "smartthings/Porch Light/level/cmd"
+          {% endif %}
+        payload: '{{ states.input_slider.light_brightness.state }}'
 
 ###Expose###
 - alias: light_sets
   trigger:
-    platform: state
-    entity_id: input_select.light_sets
+    - platform: state
+      entity_id: input_select.light_sets
   action:
-    service: input_number.set_value
-    data_template:
-      entity_id: input_number.light_temp
-      value: >
-        {%if is_state("input_select.light_sets", "daytime") %} '3500'
-        {% elif is_state("input_select.light_sets", "evening") %} '2700'
-        {% elif is_state("input_select.light_sets", "bedtime") %} '2200'
-        {% endif %}
-    service: input_number.set_value
-    data_template:
-      entity_id: input_number.light_brightness
-      value: >
-        {%if is_state("input_select.light_sets", "daytime") %} '252'
-        {% elif is_state("input_select.light_sets", "evening") %} '200'
-        {% elif is_state("input_select.light_sets", "bedtime") %} '125'
-        {% endif %}
+    - service: input_number.set_value
+      data_template:
+        entity_id: input_number.light_temp
+        value: >
+          {%if is_state("input_select.light_sets", "daytime") %} '3500'
+          {% elif is_state("input_select.light_sets", "evening") %} '2700'
+          {% elif is_state("input_select.light_sets", "bedtime") %} '2200'
+          {% endif %}
+    - service: input_number.set_value
+      data_template:
+        entity_id: input_number.light_brightness
+        value: >
+          {%if is_state("input_select.light_sets", "daytime") %} '252'
+          {% elif is_state("input_select.light_sets", "evening") %} '200'
+          {% elif is_state("input_select.light_sets", "bedtime") %} '125'
+          {% endif %}
