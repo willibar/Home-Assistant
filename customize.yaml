@@ -29,3 +29,7 @@ media_player.back_garden_speaker:
 script.net_radio:
   friendly_name: Start Playing
   icon: mdi:play
+
+script.set_lighting:
+  friendly_name: Set Light
+  icon: mdi:play
