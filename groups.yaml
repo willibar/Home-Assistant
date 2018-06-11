@@ -20,6 +20,7 @@ vHome:
     - group.home_env
     - group.travel_times
     - group.weatherfc
+    - group.set_lights
  
 #vMedia:
 #  name: Media
@@ -48,6 +49,7 @@ vBedroom:
     - group.bed_automations
     - group.weatherfc
     - group.net_radio
+    - group.set_lights
     - media_player.bedroom_speaker
 
 vGuestBed:
@@ -373,3 +375,12 @@ net_radio:
     - input_select.speakers
     - input_number.volume_radio
     - script.net_radio
+
+set_lights:
+  name: Lighting
+  control: hidden
+  entities:
+    - input_select.lights
+    - input_number.light_temp
+    - input_number.light_brightness
+    - script.set_lighting
