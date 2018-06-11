@@ -27,6 +27,7 @@ lights:
 light_sets:
   name: 'Pre-set Options'
   options:
+    - custom
     - daytime
     - evening
     - bedtime
