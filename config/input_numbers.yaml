@@ -22,8 +22,8 @@ light_temp:
 light_brightness:
   name: Brightness
   icon: mdi:lightbulb-on
-  initial: 80
+  initial: 200
   min: 0
-  max: 100
-  step: 5
+  max: 252
+  step: 25
   
