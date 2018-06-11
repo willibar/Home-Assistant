@@ -24,7 +24,7 @@ lights:
     - Porch Light
   icon: mdi:lightbulb-on
 
-pre-set:
+light_sets:
   name: 'Pre-set Options'
   options:
     - daytime
