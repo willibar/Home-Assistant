@@ -39,7 +39,7 @@ set_lighting:
           {% elif is_state("input_select.lights", "Bill Bedside") %} "smartthings/Bill Bedside/colorTemperature/cmd"
           {% elif is_state("input_select.lights", "Porch Light") %} "smartthings/Porch Light/colorTemperature/cmd"
           {% endif %}
-        payload: '{{ states.input_slider.light_temp.state }}'
+        payload: {{ states('input_slider.light_temp') | int }}
     ###set brightness###
     - service: mqtt.publish
       data_template:
@@ -48,7 +48,7 @@ set_lighting:
           {% elif is_state("input_select.lights", "Bill Bedside") %} "smartthings/Bill Bedside/level/cmd"
           {% elif is_state("input_select.lights", "Porch Light") %} "smartthings/Porch Light/level/cmd"
           {% endif %}
-        payload: '{{ states.input_slider.light_brightness.state }}'
+        payload: {{ states('input_slider.light_brightness') | int }}
     ###switch on###
     - service: mqtt.publish
       data_template:
