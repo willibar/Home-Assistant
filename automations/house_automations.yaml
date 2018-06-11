@@ -17,8 +17,12 @@
   action:
     - service: mqtt.publish
       data:
+        topic: "smartthings/Porch Light/colorTemperature/cmd"
+        payload: 3500
+    - service: mqtt.publish
+      data:
         topic: "smartthings/Porch Light/level/cmd"
-        payload: 100
+        payload: 252
     - service: mqtt.publish
       data:
         topic: "smartthings/Porch Light/switch/cmd"
