@@ -24,7 +24,6 @@ net_radio:
           {% elif is_state("input_select.radio_station", "BBC 6 Music") %} http://a.files.bbci.co.uk/media/live/manifesto/audio/simulcast/hls/uk/sbr_high/ak/bbc_6music.m3u8
           {% endif %}
         media_content_type: 'application/x-mpegurl'
-#        volume_level: '{{ states.input_slider.volume_radio.state }}'
 
 ###light_setup###
 
@@ -40,6 +39,7 @@ set_lighting:
           {% elif is_state("input_select.lights", "Porch Light") %} "smartthings/Porch Light/colorTemperature/cmd"
           {% endif %}
         payload: {{ states('input_slider.light_temp') | int }}
+#        payload: '{{ states.input_slider.light_temp.state }}'
     ###set brightness###
     - service: mqtt.publish
       data_template:
@@ -49,6 +49,7 @@ set_lighting:
           {% elif is_state("input_select.lights", "Porch Light") %} "smartthings/Porch Light/level/cmd"
           {% endif %}
         payload: {{ states('input_slider.light_brightness') | int }}
+#        payload: '{{ states.input_slider.light_brightness.state }}'
     ###switch on###
     - service: mqtt.publish
       data_template:
