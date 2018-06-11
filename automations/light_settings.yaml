@@ -39,15 +39,15 @@
       data_template:
         entity_id: input_number.light_temp
         value: >
-          {%if is_state("input_select.light_sets", "daytime") %} '3500'
-          {% elif is_state("input_select.light_sets", "evening") %} '2700'
-          {% elif is_state("input_select.light_sets", "bedtime") %} '2200'
+          {%if is_state("input_select.light_sets", "daytime") %} 3500
+          {% elif is_state("input_select.light_sets", "evening") %} 2700
+          {% elif is_state("input_select.light_sets", "bedtime") %} 2200
           {% endif %}
     - service: input_number.set_value
       data_template:
         entity_id: input_number.light_brightness
         value: >
-          {%if is_state("input_select.light_sets", "daytime") %} '252'
-          {% elif is_state("input_select.light_sets", "evening") %} '200'
-          {% elif is_state("input_select.light_sets", "bedtime") %} '125'
+          {%if is_state("input_select.light_sets", "daytime") %} 252
+          {% elif is_state("input_select.light_sets", "evening") %} 200
+          {% elif is_state("input_select.light_sets", "bedtime") %} 125
           {% endif %}
