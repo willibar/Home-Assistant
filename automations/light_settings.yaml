@@ -13,7 +13,7 @@
           {% elif is_state("input_select.lights", "Bill Bedside") %} "smartthings/Bill Bedside/colorTemperature/cmd"
           {% elif is_state("input_select.lights", "Porch Light") %} "smartthings/Porch Light/colorTemperature/cmd"
           {% endif %}
-        payload: {{ states.input_slider.light_temp.state }}
+        payload: '{{ states.input_slider.light_temp.state }}'
 
 - alias: set_level
   trigger:
@@ -27,7 +27,7 @@
           {% elif is_state("input_select.lights", "Bill Bedside") %} "smartthings/Bill Bedside/level/cmd"
           {% elif is_state("input_select.lights", "Porch Light") %} "smartthings/Porch Light/level/cmd"
           {% endif %}
-        payload: {{ states.input_slider.light_brightness.state }}
+        payload: '{{ states.input_slider.light_brightness.state }}'
 
 ###Expose###
 - alias: light_sets
