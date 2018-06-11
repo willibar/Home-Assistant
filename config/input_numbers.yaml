@@ -1,3 +1,5 @@
+###net_radio###
+
 volume_radio:
   name: Volume
   icon: mdi:volume-high
@@ -5,3 +7,23 @@ volume_radio:
   min: 0
   max: 1
   step: 0.05
+
+
+###light_setup###
+
+light_temp:
+  name: Color Temp
+  icon: mdi:palette
+  initial: 2700
+  min: 2200
+  max: 4000
+  step: 100
+
+light_brightness:
+  name: Brightness
+  icon: mdi:lightbulb-on
+  initial: 80
+  min: 0
+  max: 100
+  step: 5
+  
