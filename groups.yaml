@@ -381,6 +381,7 @@ set_lights:
   control: hidden
   entities:
     - input_select.lights
+    - automation.light_sets
     - input_number.light_temp
     - input_number.light_brightness
     - script.set_lighting
