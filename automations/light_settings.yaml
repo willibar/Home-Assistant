@@ -47,7 +47,7 @@
     data_template:
       entity_id: input_number.light_brightness
       value: >
-        {%if is_state("input_select.light_sets", "daytime") %} '100'
-        {% elif is_state("input_select.light_sets", "evening") %} '75'
-        {% elif is_state("input_select.light_sets", "bedtime") %} '50'
+        {%if is_state("input_select.light_sets", "daytime") %} '252'
+        {% elif is_state("input_select.light_sets", "evening") %} '200'
+        {% elif is_state("input_select.light_sets", "bedtime") %} '125'
         {% endif %}
