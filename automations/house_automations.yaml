@@ -15,18 +15,12 @@
       entity_id: sun.sun
       state: 'below_horizon'
   action:
-    - service: mqtt.publish
+    - service: light.turn_on
       data:
-        topic: "smartthings/Porch Light/colorTemperature/cmd"
-        payload: 3500
-    - service: mqtt.publish
-      data:
-        topic: "smartthings/Porch Light/level/cmd"
-        payload: 252
-    - service: mqtt.publish
-      data:
-        topic: "smartthings/Porch Light/switch/cmd"
-        payload: "on"
+        entity_id: light.porch_light
+        kelvin: 3600
+        brightness_pct: 100
+
 
 - alias: Front Door Off
   trigger:
@@ -35,10 +29,10 @@
       to: 'closed'
   action:
     - delay: '00:02:00'
-    - service: mqtt.publish
+    - service: light.turn_off
       data:
-        topic: "smartthings/Porch Light/switch/cmd"
-        payload: "off"
+        entity_id: light.porch_light
+
 
 - alias: Front Door Timeout
   trigger:
@@ -47,7 +41,6 @@
       to: 'on'
   action:
     - delay: '00:15:00'
-    - service: mqtt.publish
+    - service: light.turn_off
       data:
-        topic: "smartthings/Porch Light/switch/cmd"
-        payload: "off"
+        entity_id: light.porch_light
