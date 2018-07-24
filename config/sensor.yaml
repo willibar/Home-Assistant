@@ -41,19 +41,19 @@
     - download
     - upload
 
-- platform: google_travel_time
-  name: Bill Home to Work
-  icon: mdi:google-maps
-  api_key: !secret gtt_api_key
-  origin: !secret home_addr
-  destination: !secret Bwork_addr
+#- platform: google_travel_time
+#  name: Bill Home to Work
+#  icon: mdi:google-maps
+#  api_key: !secret gtt_api_key
+#  origin: !secret home_addr
+#  destination: !secret Bwork_addr
 
-- platform: google_travel_time
-  name: Amy Home to Work
-  icon: mdi:google-maps
-  api_key: !secret gtt_api_key
-  origin: !secret home_addr
-  destination: !secret Awork_addr
+#- platform: google_travel_time
+#  name: Amy Home to Work
+#  icon: mdi:google-maps
+#  api_key: !secret gtt_api_key
+#  origin: !secret home_addr
+#  destination: !secret Awork_addr
 
 - platform: waze_travel_time
   name: Bill Waze to Work
