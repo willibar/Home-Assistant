@@ -25,7 +25,46 @@
 #      data:
 #        message: 'Welcome home Amy!'
 
-      
+### Home time message###
+- alias: Welcome Home
+  trigger:
+    - platform: state
+      entity_id: device_tracker.amysiphone
+      to: 'home'
+  condition:
+    - condition: time
+      weekday:
+        - mon
+        - tue
+        - wed
+        - thu
+        - fri
+      after: '16:00:00'
+      before: '18:15:00'
+    - condition: state
+      entity_id: input_boolean.greeting_complete
+      state: 'off'
+  action:
+    - delay: '00:02:30'
+    - service: tts.google_say
+      entity_id: media_player.living_room_speaker
+      data:
+        message: 'Welcome home Amy!'
+    - service: input_boolean.turn_on
+      data:
+        entity_id: input_boolean.greeting_complete
+
+### Reset welcome home counter###
+- alias: Welcome Home Reset
+  trigger:
+    - platform: time
+      at: '00:01:00'
+  action:
+    - service: input_boolean.turn_off
+      data:
+        entity_id: input_boolean.greeting_complete
+
+
 
 #- alias: Home time end dumb
 #  trigger:

@@ -107,3 +107,7 @@ sensor: !include config/sensor.yaml
 
 input_select: !include config/input_selects.yaml
 input_number: !include config/input_numbers.yaml
+
+input_boolean:
+  greeting_complete:
+    name: Greeting Completed for today
