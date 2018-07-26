@@ -18,6 +18,8 @@ frontend:
 # Enables configuration UI
 config:
 
+recorder:
+
 http:
    ssl_certificate: !secret ssl_cert
    #/ssl/fullchain.pem
