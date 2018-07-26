@@ -33,7 +33,7 @@ views:
         - device_tracker.gstoneplus_5_3
       state_filter: 
         - home
-      show_empty: true
+      show_empty: false
       card:
         type: glance
         title: Guest's at Home
@@ -214,7 +214,7 @@ views:
         - device_tracker.gstoneplus_5_3
       state_filter: 
         - home
-      show_empty: true
+      show_empty: false
       card:
         type: glance
         title: Guest's at Home
