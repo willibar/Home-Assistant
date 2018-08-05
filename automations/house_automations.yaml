@@ -6,10 +6,10 @@
   trigger:
     - platform: state
       entity_id: binary_sensor.front_door
-      to: 'open'
+      to: 'on'
     - platform: state
       entity_id: device_tracker.google_maps_113840736270482299573
-      to: 'Home'
+      to: 'home'
   condition:
     - condition: state
       entity_id: sun.sun
@@ -26,7 +26,7 @@
   trigger:
     - platform: state
       entity_id: binary_sensor.front_door
-      to: 'closed'
+      to: 'off'
   action:
     - delay: '00:02:00'
     - service: light.turn_off
