@@ -308,6 +308,7 @@ home_devices:
   control: hidden
   entities:
     - light.porch_light
+    - light.hall_light
 
 home_automations:
   name: Home Automations
@@ -316,6 +317,9 @@ home_automations:
     - automation.front_door_on
     - automation.front_door_off
     - automation.front_door_timeout
+    - automation.hallway_on
+    - automation.hallway_off
+    - automation.hallway_timeout
 
 garden:
   name: Garden Devices
