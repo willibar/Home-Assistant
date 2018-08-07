@@ -11,9 +11,12 @@
       entity_id: device_tracker.google_maps_113840736270482299573
       to: 'home'
   condition:
-    - condition: state
-      entity_id: sun.sun
-      state: 'below_horizon'
+    - condition: sun
+      after: sunset
+      after_offset: '-02:00:00'
+#    - condition: state
+#      entity_id: sun.sun
+#      state: 'below_horizon'
   action:
     - service: light.turn_on
       data:
@@ -75,8 +78,15 @@
     - platform: state
       entity_id: binary_sensor.hall_door
       to: 'off'
+  condition:
+    - condition: state
+      entity_id: binary_sensor.front_door
+      state: 'off'
+    - condition: state
+      entity_id: binary_sensor.hall_door
+      state: 'off'
   action:
-    - delay: '00:02:00'
+    - delay: '00:03:00'
     - service: light.turn_off
       data:
         entity_id: light.hall_light
