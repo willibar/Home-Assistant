@@ -289,6 +289,7 @@ home_access:
   entities:
     - binary_sensor.ip_camera_pir_alarm_2
     - binary_sensor.pir_sensor
+    - binary_sensor.front_door_pir_sensor
     - binary_sensor.front_door
     - binary_sensor.hall_door
     - binary_sensor.other_door
@@ -299,6 +300,7 @@ home_access_details:
   entities:
     - sensor.pir_sensor_illuminance
     - sensor.pir_sensor_battery
+    - sensor.front_door_pir_sensor_battery
     - sensor.front_door_battery
     - sensor.hall_door_battery
     - sensor.other_door_battery
@@ -315,6 +317,7 @@ home_automations:
   control: hidden
   entities:
     - automation.front_door_on
+    - automation.front_door_for_strangers
     - automation.front_door_off
     - automation.front_door_timeout
     - automation.hallway_on
