@@ -289,7 +289,7 @@ home_access:
   entities:
     - binary_sensor.ip_camera_pir_alarm_2
     - binary_sensor.pir_sensor
-    - binary_sensor.front_door_pir_sensor
+    - binary_sensor.porch_pir_sensor
     - binary_sensor.front_door
     - binary_sensor.hall_door
     - binary_sensor.other_door
