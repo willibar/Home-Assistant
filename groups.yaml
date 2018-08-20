@@ -164,7 +164,6 @@ guest_bedroom:
   entities:
     - device_tracker.toshibatv
     - device_tracker.youview
-    - device_tracker.chromecast1
 
 media_devices:
   name: Media Devices
@@ -173,6 +172,7 @@ media_devices:
     - device_tracker.googlelounge
     - device_tracker.ps4
     - device_tracker.sky_q_box
+    - device_tracker.chromecast1
     - device_tracker.amysipad
 
 media_automations:
