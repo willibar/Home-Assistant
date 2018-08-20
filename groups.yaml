@@ -37,6 +37,7 @@ vLivingRoom:
     - group.media_devices
     - group.net_radio
     - media_player.living_room_speaker
+    - media_player.chromecast
     - group.lounge_automations
     - camera.camera_1
 
@@ -59,7 +60,6 @@ vGuestBed:
   entities:
     - group.guests
     - group.guest_bedroom
-    - media_player.guest_room_chromecast
 
 vCats:
   name: Cats
