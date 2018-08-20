@@ -15,6 +15,15 @@
   payload_off: "inactive"
   retain: true
 
+- platform: mqtt
+  name: "Porch PIR Sensor"
+  state_topic: "smartthings/Front Door PIR Sensor/motion/state"
+  device_class: motion
+  payload_on: "active"
+  payload_off: "inactive"
+  retain: true
+
+
 ###Door Sensors###
 - platform: mqtt
   name: "Front Door"
