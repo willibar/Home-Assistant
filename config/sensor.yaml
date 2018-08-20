@@ -98,3 +98,9 @@
   state_topic: "smartthings/PIR Motion Sensor/illuminance/state"
   device_class: illuminance
   unit_of_measurement: 'lx'
+
+- platform: mqtt
+  name: "Front Door PIR Sensor Battery"
+  state_topic: "smartthings/Front Door PIR Sensor/battery/state"
+  device_class: battery
+  unit_of_measurement: '%'
