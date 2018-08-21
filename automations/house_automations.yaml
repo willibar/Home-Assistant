@@ -25,7 +25,7 @@
 - alias: Front Door for Strangers
   trigger:
     - platform: state
-      entity_id: binary_sensor.front_door_PIR_sensor
+      entity_id: binary_sensor.porch_pir_sensor
       to: 'on'
   condition:
     - condition: sun
