@@ -8,7 +8,7 @@ net_radio:
         entity_id: >
           {%if is_state("input_select.speakers", "Living Room") %} media_player.living_room_speaker
           {% elif is_state("input_select.speakers", "Bedroom") %} media_player.bedroom_speaker
-          {% elif is_state("input_select.speakers", "Garden") %} media_player.back_garden_speaker
+          {% elif is_state("input_select.speakers", "Kitchen") %} media_player.kitchen_speaker
           {% endif %}
         volume_level: '{{ states.input_slider.volume_radio.state }}'
     - service: media_player.play_media
@@ -16,7 +16,7 @@ net_radio:
         entity_id: >
           {%if is_state("input_select.speakers", "Living Room") %} media_player.living_room_speaker
           {% elif is_state("input_select.speakers", "Bedroom") %} media_player.bedroom_speaker
-          {% elif is_state("input_select.speakers", "Garden") %} media_player.back_garden_speaker
+          {% elif is_state("input_select.speakers", "Kitchen") %} media_player.kitchen_speaker
           {% endif %}
         media_content_id: >
           {% if is_state("input_select.radio_station", "BBC Radio 1") %} http://a.files.bbci.co.uk/media/live/manifesto/audio/simulcast/hls/uk/sbr_high/ak/bbc_radio_one.m3u8
