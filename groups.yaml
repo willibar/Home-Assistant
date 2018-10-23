@@ -155,6 +155,7 @@ bed_automations:
   control: hidden
   entities:
     - automation.wakeup_time
+    - automation.morning_lights
     - automation.morning_radio
     - automation.morning_radio_2
 
