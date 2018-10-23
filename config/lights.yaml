@@ -62,3 +62,19 @@
   payload_off: "off"
   retain: true
   optimistic: false
+
+
+  ###Common Area Lights###
+- platform: mqtt
+  name: "Dressing Room Light"
+  state_topic: "smartthings/Dressing Room Light/switch/state"
+  command_topic: "smartthings/Dressing Room Light/switch/cmd"
+  brightness_state_topic: "smartthings/Dressing Room Light/level/state"
+  brightness_command_topic: "smartthings/Dressing Room Light/level/cmd"
+  brightness_scale: 100
+#  color_temp_state_topic: "smartthings/Hall Light/colorTemperature/state"
+#  color_temp_command_topic: "smartthings/Hall Light/colorTemperature/cmd"
+  payload_on: "on"
+  payload_off: "off"
+  retain: true
+  optimistic: false
