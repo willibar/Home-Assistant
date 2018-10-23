@@ -31,10 +31,8 @@
     - temperature
     - precip_probability
     - wind_speed
-    - temperatureLow
-    - temperatureLowTime
-    - temperatureHigh
-    - temperatureHighTime
+    - temperature_low
+    - temperature_high
 
 
 - platform: speedtest
