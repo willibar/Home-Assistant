@@ -170,6 +170,7 @@ media_devices:
   control: hidden
   entities:
     - device_tracker.googlelounge
+    - device_tracker.googlehome
     - device_tracker.ps4
     - device_tracker.sky_q_box
     - device_tracker.chromecast1
