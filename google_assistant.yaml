@@ -1,6 +1,6 @@
 project_id: !secret GA_project_id
 #client_id: !secret GA_client_id
-access_token: !secret GA_access_token
+#access_token: !secret GA_access_token
 agent_user_id: !secret GA_agent_user_id
 api_key: !secret GA_api_key
 #expose_by_default: true
