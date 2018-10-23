@@ -39,32 +39,3 @@ set_lighting:
           {% endif %}
         kelvin: '{{ states.input_slider.light_temp.state }}'
         brightness_pct: '{{ states.input_slider.light_brightness.state }}'
-    ###set temp###
-#    - service: mqtt.publish
-#      data_template:
-#        topic: >
-#          {%if is_state("input_select.lights", "Amy Bedside") %} "smartthings/Amy Bedside/colorTemperature/cmd"
-#          {% elif is_state("input_select.lights", "Bill Bedside") %} "smartthings/Bill Bedside/colorTemperature/cmd"
-#          {% elif is_state("input_select.lights", "Porch Light") %} "smartthings/Porch Light/colorTemperature/cmd"
-#          {% endif %}
-#        payload: {{ states('input_slider.light_temp') | int }}
-#        payload: '{{ states.input_slider.light_temp.state }}'
-    ###set brightness###
-#    - service: mqtt.publish
-#      data_template:
-#        topic: >
-#          {%if is_state("input_select.lights", "Amy Bedside") %} "smartthings/Amy Bedside/level/cmd"
-#          {% elif is_state("input_select.lights", "Bill Bedside") %} "smartthings/Bill Bedside/level/cmd"
-#          {% elif is_state("input_select.lights", "Porch Light") %} "smartthings/Porch Light/level/cmd"
-#          {% endif %}
-#        payload: {{ states('input_slider.light_brightness') | int }}
-#        payload: '{{ states.input_slider.light_brightness.state }}'
-    ###switch on###
-#    - service: mqtt.publish
-#      data_template:
-#        topic: >
-#          {%if is_state("input_select.lights", "Amy Bedside") %} "smartthings/Amy Bedside/switch/cmd"
-#          {% elif is_state("input_select.lights", "Bill Bedside") %} "smartthings/Bill Bedside/switch/cmd"
-#          {% elif is_state("input_select.lights", "Porch Light") %} "smartthings/Porch Light/switch/cmd"
-#          {% endif %}
-#        payload: "on"
