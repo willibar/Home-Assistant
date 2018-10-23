@@ -100,7 +100,7 @@ script: !include scripts.yaml
 zone: !include zones.yaml
 
 camera: !include camera.yaml
-#google_assistant: !include google_assistant.yaml
+google_assistant: !include google_assistant.yaml
 light: !include config/lights.yaml
 switch: !include config/switches.yaml
 
