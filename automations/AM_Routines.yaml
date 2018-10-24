@@ -87,10 +87,10 @@
     - service: light.turn_on
       data:
         entity_id:
-          - light.bill_bedside_light
-          - light.amy_bedside_light
+          - light.bill_bedside_light2
+          - light.amy_bedside_light2
         transition: 1200
-        kelvin: 2700
+        brightness: 70
 
 
 #- alias: Weekend Lights
