@@ -32,6 +32,27 @@
   retain: true
   optimistic: false
   
+  ###Bedside Lights2###
+- platform: mqtt_template
+  name: "Amy Bedside Light2"
+  state_topic: "smartthings/Amy Bedside/switch/state"
+  state_template: "{{ value.split(',')[0] }}"
+  command_topic: "smartthings/Amy Bedside/switch/cmd"
+  command_on_template: "on,{{ brightness|d }},{{ color|d}}"
+  command_off_template: "off"
+  brightness_template: "{{ value.split(',')[1] }}"
+  color_temp_template: "{{ value.split(',')[1] }}"
+    
+- platform: mqtt_template
+  name: "Bill Bedside Light2"
+  state_topic: "smartthings/Bill Bedside/switch/state"
+  state_template: "{{ value.split(',')[0] }}"
+  command_topic: "smartthings/Bill Bedside/switch/cmd"
+  command_on_template: "on,{{ brightness|d }},{{ color|d}}"
+  command_off_template: "off"
+  brightness_template: "{{ value.split(',')[1] }}"
+  color_temp_template: "{{ value.split(',')[1] }}"
+    
   
   ###Hallway Lights##
 
