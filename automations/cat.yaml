@@ -8,7 +8,7 @@
       entity_id: sensor.weather_temperature
       below: 8
     - condition: numeric_state
-      entity_id: sensor.dark_sky_daily_high_temperature
+      entity_id: sensor.dark_sky_daytime_high_temperature
       below: 12
   action:
     - service: switch.turn_on
@@ -31,7 +31,7 @@
       entity_id: sensor.weather_temperature
       below: 8
     - condition: numeric_state
-      entity_id: sensor.dark_sky_daily_high_temperature
+      entity_id: sensor.dark_sky_daytime_high_temperature
       below: 12
   action:
     - service: switch.turn_on
