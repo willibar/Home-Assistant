@@ -27,7 +27,6 @@
   brightness_scale: 100
   color_temp_state_topic: "smartthings/Bill Bedside/colorTemperature/state"
   color_temp_command_topic: "smartthings/Bill Bedside/colorTemperature/cmd"
-  color_temp_scale: 100
   payload_on: "on"
   payload_off: "off"
   retain: true
