@@ -15,7 +15,7 @@ vHome:
   entities:
     - group.family
     - group.guests
-    - group.home_devices
+    - group.home_lights
     - camera.camera_1
     - group.home_env
     - group.travel_times
@@ -42,16 +42,24 @@ vLivingRoom:
     - group.lounge_automations
     - camera.camera_1
 
+vKitchen:
+  name: Kitchen
+  view: yes
+  icon: silverware-fork-knife
+  entities:
+    - group.kitchen
+
 vBedroom:
   name: Bedroom
   view: yes
   icon: mdi:hotel
   entities:
     - group.bedroom
-    - group.bed_automations
+    - group.bed_env
     - group.weatherfc
+    - group.bed_automations
     - group.net_radio
-    - group.set_lights
+#    - group.set_lights
     - media_player.bedroom_speaker
 
 vGuestBed:
@@ -68,15 +76,16 @@ vCats:
   icon: mdi:cat
   entities:
     - group.cat_devices
-    - group.cat_automations
+    - group.con_env
     - group.weatherfc
+    - group.cat_automations
 
 vGarden:
   name: Garden
   view: yes
   icon: mdi:flower
   entities:
-    - group.garden
+#    - group.garden
     - group.weatherfc
     - group.net_radio
 
@@ -95,7 +104,7 @@ vSmartHome:
   icon: mdi:home-assistant
   entities:
     - group.smart_home_devices
-    - group.home_access
+    - group.home_devices
     - group.home_automations
     - group.media_automations
 
@@ -114,8 +123,8 @@ vTechnical:
   view: yes
   icon: mdi:settings
   entities:
-    - group.home_access_details
     - group.home_env_full
+    - group.home_device_details
     - group.all_automations
 
     
@@ -187,6 +196,12 @@ media_automations:
     - automation.volume_up
     - automation.volume_down
 
+kitchen:
+  name: Kitchen Devices
+  control: hidden
+  entities:
+    - device_tracker.googlehome
+
 network_devices:
   name: Network Devices
   control: hidden
@@ -241,6 +256,22 @@ home_env:
     - sensor.downstairs_thermostat_humidity
     - binary_sensor.downstairs_thermostat_has_leaf
 
+bed_env:
+  name: Bedroom Climate
+  control: hidden
+  entities:
+    - sensor.bedroom_temp
+    - sensor.bedroom_humidity
+    - climate.downstairs
+
+con_env:
+  name: Conservatory Climate
+  control: hidden
+  entities:
+    - sensor.conservatory_temp
+    - sensor.conservatory_humidity
+    - sensor.dark_sky_temperature
+
 home_env_full:
   name: Climate Full
   control: hidden
@@ -250,13 +281,17 @@ home_env_full:
     - climate.downstairs
     - sensor.downstairs_thermostat_target
     - sensor.downstairs_thermostat_temperature
-    - sensor.downstairs_thermostat_humidity
     - sensor.downstairs_thermostat_operation_mode
+    - binary_sensor.downstairs_thermostat_has_leaf
+    - binary_sensor.downstairs_thermostat_is_using_emergency_heat
+    - sensor.downstairs_thermostat_humidity
+    - sensor.bedroom_temp
+    - sensor.bedroom_humidity
+    - sensor.conservatory_temp
+    - sensor.conservatory_humidity
     - sensor.downstairs_thermostat_hvac_state
     - binary_sensor.downstairs_thermostat_fan
-    - binary_sensor.downstairs_thermostat_has_leaf
     - binary_sensor.downstairs_thermostat_is_locked
-    - binary_sensor.downstairs_thermostat_is_using_emergency_heat
 
 smart_home:
   name: Smart Home
@@ -287,7 +322,7 @@ lounge_automations:
     - automation.lamp_light_on
     - automation.lamp_light_off
 
-home_access:
+home_devices:
   name: Access
   control: hidden
   entities:
@@ -298,8 +333,8 @@ home_access:
     - binary_sensor.hall_door
     - binary_sensor.other_door
 
-home_access_details:
-  name: Access Details
+home_device_details:
+  name: Device Details
   control: hidden
   entities:
     - sensor.pir_sensor_illuminance
@@ -308,9 +343,11 @@ home_access_details:
     - sensor.front_door_battery
     - sensor.hall_door_battery
     - sensor.other_door_battery
+    - sensor.bedroom_temp_probe_battery
+    - sensor.conservatory_temp_probe_battery
 
-home_devices:
-  name: Home Devices
+home_lights:
+  name: Home Lights
   control: hidden
   entities:
     - light.porch_light
@@ -327,12 +364,6 @@ home_automations:
     - automation.hallway_on
     - automation.hallway_off
     - automation.hallway_timeout
-
-garden:
-  name: Garden Devices
-  control: hidden
-  entities:
-    - device_tracker.googlehome
 
 weatherfc:
   name: Weather Forecast
