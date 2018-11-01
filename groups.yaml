@@ -45,7 +45,7 @@ vLivingRoom:
 vKitchen:
   name: Kitchen
   view: yes
-  icon: silverware-fork-knife
+  icon: mdi:silverware-fork-knife
   entities:
     - group.kitchen
 
