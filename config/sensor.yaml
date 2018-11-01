@@ -75,19 +75,19 @@
   unit_of_measurement: '°C'
 
 - platform: mqtt
-  name: "Bedroom Temp"
+  name: "Conservatory Temp"
   state_topic: "smartthings/Xiaomi Temp Probe 2/temperature/state"
   device_class: temperature
   unit_of_measurement: '°C'
 
 - platform: mqtt
-  name: "Bedroom Temp"
+  name: "Bedroom Humidity"
   state_topic: "smartthings/Xiaomi Temp Probe 1/humidity/state"
   device_class: humidity
   unit_of_measurement: '%'
 
 - platform: mqtt
-  name: "Bedroom Temp"
+  name: "Conservatory Humidity"
   state_topic: "smartthings/Xiaomi Temp Probe 2/humidity/state"
   device_class: humidity
   unit_of_measurement: '%'
