@@ -158,8 +158,8 @@ bedroom:
     - device_tracker.googlebed
     - light.amy_bedside_light
     - light.bill_bedside_light
-    - light.amy_bedside_light2
-    - light.bill_bedside_light2
+#    - light.amy_bedside_light2
+#    - light.bill_bedside_light2
 
 bed_automations:
   name: Bedroom Automations
@@ -182,7 +182,6 @@ media_devices:
   control: hidden
   entities:
     - device_tracker.googlelounge
-    - device_tracker.googlehome
     - device_tracker.ps4
     - device_tracker.sky_q_box
     - device_tracker.chromecast1
