@@ -80,14 +80,14 @@ vCats:
     - group.weatherfc
     - group.cat_automations
 
-vGarden:
-  name: Garden
-  view: yes
-  icon: mdi:flower
-  entities:
+#vGarden:
+#  name: Garden
+#  view: yes
+#  icon: mdi:flower
+#  entities:
 #    - group.garden
-    - group.weatherfc
-    - group.net_radio
+#    - group.weatherfc
+#    - group.net_radio
 
 vWeather:
   name: Weather
