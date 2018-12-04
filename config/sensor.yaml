@@ -22,6 +22,8 @@
 
 - platform: darksky
   api_key: !secret dark_sky_api_key
+  forecast:
+    - 0
   units: uk2
   monitored_conditions:
     - summary
