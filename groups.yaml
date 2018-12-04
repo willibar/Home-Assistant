@@ -391,7 +391,7 @@ weatherd:
 #    - sensor.dark_sky_daily_low_temperature
     - sensor.dark_sky_overnight_low_temperature_0
     - sensor.dark_sky_nearest_storm_distance
-    - snesor.dark_sky_precip_probability_0
+    - sensor.dark_sky_precip_probability_0
     - sensor.weather_cloudiness
     - sensor.weather_pressure
     - sensor.dark_sky_wind_speed
