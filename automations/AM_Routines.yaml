@@ -90,7 +90,7 @@
           - light.bill_bedside_light2
           - light.amy_bedside_light2
 #        transition: 1200
-        brightness: 70
+#        brightness: 70
 
 
 #- alias: Weekend Lights
