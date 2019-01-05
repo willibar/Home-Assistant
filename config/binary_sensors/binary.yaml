@@ -42,7 +42,7 @@
   retain: true
 
 - platform: mqtt
-  name: "Other Door"
+  name: "Conservatory Door"
   state_topic: "smartthings/Door Sensor 3 (Conservatory)/contact/state"
   device_class: door
   payload_on: "open"
