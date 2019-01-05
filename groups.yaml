@@ -327,6 +327,7 @@ home_devices:
   control: hidden
   entities:
     - binary_sensor.ip_camera_pir_alarm_2
+    - binary_sensor.ip_camera_motion
     - binary_sensor.pir_sensor
     - binary_sensor.porch_pir_sensor
     - binary_sensor.front_door
