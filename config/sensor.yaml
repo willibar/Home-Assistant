@@ -108,8 +108,8 @@
   unit_of_measurement: '%'
 
 - platform: mqtt
-  name: "Other Door Battery"
-  state_topic: "smartthings/Door Sensor 3/battery/state"
+  name: "Conservatory Door Battery"
+  state_topic: "smartthings/Door Sensor 3 (Conservatory)/battery/state"
   device_class: battery
   unit_of_measurement: '%'
 
