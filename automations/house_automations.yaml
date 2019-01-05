@@ -130,9 +130,9 @@
     - platform: state
       entity_id: binary_sensor.conservatory_door
       to: 'on'
-    - platform: state
-      entity_id: binary_sensor.ip_camera_pir_alarm_2
-      to: 'on'
+#    - platform: state
+#      entity_id: binary_sensor.ip_camera_pir_alarm_2
+#      to: 'on'
   condition:
     - condition: sun
       after: sunset
@@ -154,14 +154,16 @@
       entity_id: binary_sensor.ip_camera_pir_alarm_2
       to: 'off'
   condition:
-    - condition: state
-      entity_id: binary_sensor.conservatory_door
-      state: 'off'
-    - condition: state
-      entity_id: binary_sensor.ip_camera_pir_alarm_2
-      state: 'off'
+    - condition: and
+        conditions:
+          - condition: state
+            entity_id: binary_sensor.conservatory_door
+            state: 'off'
+          - condition: state
+            entity_id: binary_sensor.ip_camera_pir_alarm_2
+            state: 'off'
   action:
-    - delay: '00:30:00'
+    - delay: '00:02:00'
     - service: light.turn_off
       data:
         entity_id: light.conservatory_light
