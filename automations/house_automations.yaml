@@ -122,3 +122,58 @@
     - service: light.turn_off
       data:
         entity_id: light.hall_light
+
+
+###Conservatory Automations###
+- alias: Conservatory On
+  trigger:
+    - platform: state
+      entity_id: binary_sensor.conservatory_door
+      to: 'on'
+    - platform: state
+      entity_id: binary_sensor.ip_camera_pir_alarm_2
+      to: 'on'
+  condition:
+    - condition: sun
+      after: sunset
+      after_offset: '-01:00:00'
+  action:
+    - service: light.turn_on
+      data:
+        entity_id: light.conservatory_light
+#        kelvin: 3600
+        brightness_pct: 100
+
+
+- alias: Conservatory Off
+  trigger:
+    - platform: state
+      entity_id: binary_sensor.conservatory_door
+      to: 'off'
+    - platform: state
+      entity_id: binary_sensor.ip_camera_pir_alarm_2
+      to: 'off'
+  condition:
+    - condition: state
+      entity_id: binary_sensor.conservatory_door
+      state: 'off'
+    - condition: state
+      entity_id: binary_sensor.ip_camera_pir_alarm_2
+      state: 'off'
+  action:
+    - delay: '00:30:00'
+    - service: light.turn_off
+      data:
+        entity_id: light.conservatory_light
+
+
+- alias: Conservatory Timeout
+  trigger:
+    - platform: state
+      entity_id: light.conservatory_light
+      to: 'on'
+  action:
+    - delay: '01:00:00'
+    - service: light.turn_off
+      data:
+        entity_id: light.conservatory_light
