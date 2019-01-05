@@ -233,6 +233,7 @@ cat_devices:
   entities:
     - device_tracker.sureflap_hub
     - device_tracker.space_heater
+    - light.conservatory_light
     - switch.space_heater
 
 cat_automations:
@@ -330,7 +331,7 @@ home_devices:
     - binary_sensor.porch_pir_sensor
     - binary_sensor.front_door
     - binary_sensor.hall_door
-    - binary_sensor.other_door
+    - binary_sensor.conservatory_door
 
 home_device_details:
   name: Device Details
@@ -341,7 +342,7 @@ home_device_details:
     - sensor.front_door_pir_sensor_battery
     - sensor.front_door_battery
     - sensor.hall_door_battery
-    - sensor.other_door_battery
+    - sensor.conservatory_door_battery
     - sensor.bedroom_temp_probe_battery
     - sensor.conservatory_temp_probe_battery
 
