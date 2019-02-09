@@ -13,7 +13,7 @@
   device_class: motion
   payload_on: "active"
   payload_off: "inactive"
-  retain: true
+#  retain: true
 
 - platform: mqtt
   name: "Porch PIR Sensor"
@@ -21,7 +21,7 @@
   device_class: motion
   payload_on: "active"
   payload_off: "inactive"
-  retain: true
+#  retain: true
 
 
 ###Door Sensors###
@@ -31,7 +31,7 @@
   device_class: door
   payload_on: "open"
   payload_off: "closed"
-  retain: true
+#  retain: true
 
 - platform: mqtt
   name: "Hall Door"
@@ -39,7 +39,7 @@
   device_class: door
   payload_on: "open"
   payload_off: "closed"
-  retain: true
+#  retain: true
 
 - platform: mqtt
   name: "Conservatory Door"
@@ -47,5 +47,5 @@
   device_class: door
   payload_on: "open"
   payload_off: "closed"
-  retain: true
+#  retain: true
 
