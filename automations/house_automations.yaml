@@ -11,9 +11,12 @@
       entity_id: device_tracker.google_maps_113840736270482299573
       to: 'home'
   condition:
-    - condition: sun
-      after: sunset
-      after_offset: '-01:00:00'
+    - condition: state
+      entity_id: sun.sun
+      state: below_horizon
+#    - condition: sun
+#      after: sunset
+#      after_offset: '-01:00:00'
   action:
     - service: light.turn_on
       data:
@@ -28,9 +31,12 @@
       entity_id: binary_sensor.porch_pir_sensor
       to: 'on'
   condition:
-    - condition: sun
-      after: sunset
-      after_offset: '-01:00:00'
+    - condition: state
+      entity_id: sun.sun
+      state: below_horizon
+#    - condition: sun
+#      after: sunset
+#      after_offset: '-01:00:00'
 #    - condition: time
 #      before: '23:59:00'
   action:
@@ -45,16 +51,16 @@
         entity_id: light.porch_light
 
 
-- alias: Front Door Off
-  trigger:
-    - platform: state
-      entity_id: binary_sensor.front_door
-      to: 'off'
-  action:
-    - delay: '00:02:00'
-    - service: light.turn_off
-      data:
-        entity_id: light.porch_light
+#- alias: Front Door Off
+#  trigger:
+#    - platform: state
+#      entity_id: binary_sensor.front_door
+#      to: 'off'
+#  action:
+#    - delay: '00:02:00'
+#    - service: light.turn_off
+#      data:
+#        entity_id: light.porch_light
 
 
 - alias: Front Door Timeout
@@ -106,7 +112,7 @@
       entity_id: binary_sensor.hall_door
       state: 'off'
   action:
-    - delay: '00:03:00'
+    - delay: '00:10:00'
     - service: light.turn_off
       data:
         entity_id: light.hall_light
@@ -134,9 +140,12 @@
 #      entity_id: binary_sensor.ip_camera_pir_alarm_2
 #      to: 'on'
   condition:
-    - condition: sun
-      after: sunset
-      after_offset: '-01:00:00'
+    - condition: state
+      entity_id: sun.sun
+      state: below_horizon
+#    - condition: sun
+#      after: sunset
+#      after_offset: '-01:00:00'
   action:
     - service: light.turn_on
       data:
@@ -145,28 +154,28 @@
         brightness_pct: 100
 
 
-- alias: Conservatory Off
-  trigger:
-    - platform: state
-      entity_id: binary_sensor.conservatory_door
-      to: 'off'
-    - platform: state
-      entity_id: binary_sensor.ip_camera_pir_alarm_2
-      to: 'off'
-  condition:
-    - condition: and
-      conditions:
-        - condition: state
-          entity_id: binary_sensor.conservatory_door
-          state: 'off'
-        - condition: state
-          entity_id: binary_sensor.ip_camera_pir_alarm_2
-          state: 'off'
-  action:
-    - delay: '00:02:00'
-    - service: light.turn_off
-      data:
-        entity_id: light.conservatory_light
+#- alias: Conservatory Off
+#  trigger:
+#    - platform: state
+#      entity_id: binary_sensor.conservatory_door
+#      to: 'off'
+#    - platform: state
+#      entity_id: binary_sensor.ip_camera_pir_alarm_2
+#      to: 'off'
+#  condition:
+#    - condition: and
+#      conditions:
+#        - condition: state
+#          entity_id: binary_sensor.conservatory_door
+#          state: 'off'
+#        - condition: state
+#          entity_id: binary_sensor.ip_camera_pir_alarm_2
+#          state: 'off'
+#  action:
+#    - delay: '00:02:00'
+#    - service: light.turn_off
+#      data:
+#        entity_id: light.conservatory_light
 
 
 - alias: Conservatory Timeout
@@ -175,7 +184,7 @@
       entity_id: light.conservatory_light
       to: 'on'
   action:
-    - delay: '01:00:00'
+    - delay: '00:30:00'
     - service: light.turn_off
       data:
         entity_id: light.conservatory_light
